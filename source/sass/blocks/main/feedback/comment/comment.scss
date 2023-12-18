@@ -1,0 +1,8 @@
+.comment {
+  .comment__title {
+    @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0);
+  }
+  .comment__label {
+    @include visually-hidden;
+  }
+}

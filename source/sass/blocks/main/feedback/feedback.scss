@@ -1,0 +1,11 @@
+.feedback {
+  padding:27px 20px 24px 20px;
+  .feedback__title {
+    @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
+  }
+  .feedback__text {
+    @include title-styles($font-primary, 14px, 400, 18px, 0);
+    text-transform: uppercase;
+  }
+}
+

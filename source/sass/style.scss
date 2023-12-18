@@ -1,1 +1,22 @@
 // Начните писать стили здесь
+@import "global/variables.scss";
+@import "utils/mixins.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "blocks/header/header.scss";
+@import "blocks/main/promo/promo.scss";
+@import "blocks/main/programs/programs.scss";
+@import "blocks/main/guide/guide.scss";
+@import "blocks/main/example/example.scss";
+@import "blocks/main/feedback/feedback.scss";
+@import "blocks/main/address/address.scss";
+@import "blocks/main/feedback/personal-data/personal-data.scss";
+@import "blocks/main/feedback/comment/comment.scss";
+@import "blocks/main/feedback/addition/addition.scss";
+@import "blocks/main/catalog/catalog.scss";
+@import "blocks/main/catalog/additional/addtitional.scss";
+@import "blocks/main/catalog/additional/product-list-add/product-list-add.scss";
+
+
+
+

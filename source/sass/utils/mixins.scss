@@ -1,0 +1,33 @@
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+};
+@mixin list-styles {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+@mixin title-styles($font-family, $font-size, $font-weight, $line-height, $margin) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  margin: $margin;
+}
+
+@mixin text-styles($font-family, $font-size, $font-weight, $line-height, $margin) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  margin: $margin;
+}

@@ -1,0 +1,6 @@
+.additional {
+  padding:25px 20px 35px 20px;
+  .additional__title {
+    @include title-styles($font-primary, $font-size-title-list, 400, 24px, 0);
+  }
+}
