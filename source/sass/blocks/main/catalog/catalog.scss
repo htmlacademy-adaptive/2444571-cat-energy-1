@@ -1,6 +1,7 @@
 .catalog {
   padding:27px 20px 0px 20px;
-  .catalog__title {
-    @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
-  }
+}
+
+.catalog__title {
+  @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
 }

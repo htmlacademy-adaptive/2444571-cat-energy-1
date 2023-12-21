@@ -1,6 +1,3 @@
-.address {
-  .address__title {
-    @include visually-hidden;
-  }
+.address__title {
+  @include visually-hidden;
 }
-
