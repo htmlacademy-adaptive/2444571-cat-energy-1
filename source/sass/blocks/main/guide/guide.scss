@@ -1,0 +1,18 @@
+.guide {
+  padding:$section-padding;
+}
+
+.guide__title {
+  @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
+}
+
+.guide__list {
+  @include list-styles;
+  padding-top:40px;
+}
+
+.guide-item__content {
+  @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
+  color:$color-grey;
+}
+

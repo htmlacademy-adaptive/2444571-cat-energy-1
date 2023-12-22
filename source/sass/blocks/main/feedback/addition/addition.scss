@@ -1,0 +1,3 @@
+.addition__title {
+  @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0)
+}

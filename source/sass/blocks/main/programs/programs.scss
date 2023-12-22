@@ -1,0 +1,25 @@
+.programs {
+  padding:$section-padding;
+}
+
+.programs__title {
+  @include visually-hidden;
+}
+
+.programs__list {
+  @include list-styles;
+}
+
+.programs__item {
+  margin:20px 0;
+}
+
+.program__title {
+  @include title-styles($font-primary, $font-size-title-list, 400, 37px, 0);
+  text-transform:uppercase;
+}
+
+.program__text {
+  @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
+  color:$color-grey;
+}

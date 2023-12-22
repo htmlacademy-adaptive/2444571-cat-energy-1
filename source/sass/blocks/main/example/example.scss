@@ -1,0 +1,23 @@
+.example {
+  padding:25px 20px 40px 20px;
+}
+
+.example__title {
+  @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
+}
+
+.example__text {
+  @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
+  padding-top:40px;
+  margin:0;
+  color:$color-grey;
+}
+
+.example__statistic-info {
+  @include text-styles($font-secondary, $font-size-small, 400, 12px, 0);
+  color:$color-grey;
+}
+
+.example__statistic-count {
+  @include text-styles($font-primary, $font-size-title-list, 400, 24px, 0);
+}
