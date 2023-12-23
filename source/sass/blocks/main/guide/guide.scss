@@ -9,10 +9,37 @@
 .guide__list {
   @include list-styles;
   padding-top:40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:26px;
 }
 
 .guide-item__content {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   color:$color-grey;
+}
+
+@media (min-width:$tablet) {
+
+  .guide {
+    padding:$section-padding-tablet;
+  }
+
+  .guide__list {
+    grid-template: 1fr 1fr/1fr 1fr;
+    gap:37px 153px;
+  }
+}
+@media (min-width:$desktop) {
+
+  .guide {
+    padding:$section-padding-desktop;
+  }
+
+  .guide__list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:1fr;
+    gap:95px;
+  }
 }
 

@@ -1,7 +1,20 @@
 .additional {
-  padding:25px 20px 35px 20px;
+  padding:26px 20px;
 }
 
 .additional__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 24px, 0);
 }
+
+@media (min-width:$tablet) {
+  .additional {
+    padding:70 30px;
+  }
+}
+
+@media (min-width:$desktop) {
+  .additional {
+    padding:76px 110px;
+  }
+}
+

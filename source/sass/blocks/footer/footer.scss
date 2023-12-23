@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+@media (min-width: $tablet) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding:61.5px 30px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding:72.5px 110px;
+  }
+}
+
+

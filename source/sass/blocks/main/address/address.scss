@@ -1,3 +1,35 @@
+.address {
+  display: flex;
+  padding: 20px 26px;
+}
+
+.address__text {
+  margin: 0;
+  text-transform: uppercase;
+  max-width:140px;
+}
+
+.address__contacts {
+  max-width:140px;
+  margin-left:auto;
+}
+
 .address__title {
   @include visually-hidden;
 }
+
+@media (min-width: $tablet) {
+  .address {
+    padding:70px 61px;
+  }
+
+  .address__text {
+    max-width:163px;
+  }
+
+  .address__contacts {
+    max-width:157px;
+  }
+}
+
+

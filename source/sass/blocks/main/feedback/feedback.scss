@@ -1,5 +1,7 @@
 .feedback {
   padding:27px 20px 24px 20px;
+  max-width:$mobile;
+  margin:0 auto;
 }
 
 .feedback__title {
@@ -11,3 +13,47 @@
   text-transform: uppercase;
 }
 
+@media (min-width:$tablet) {
+
+  .feedback {
+    padding:27px 70px;
+  }
+}
+
+@media (min-width:$desktop) {
+
+  .feedback {
+    padding:27px 110px;
+  }
+
+  .feedback__inner {
+    display:flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width:$mobile) {
+  .feedback__rules {
+    display:block;
+  }
+}
+
+@media (min-width:$tablet) {
+  .feedback {
+    max-width:$tablet;
+    margin:0 auto;
+  }
+
+  .feedback__rules {
+    display:inline-block;
+  }
+
+}
+
+@media (min-width:$desktop) {
+  .feedback {
+    max-width:$desktop;
+    margin:0 auto;
+  }
+
+}

@@ -1,3 +1,9 @@
 .personal-data__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0);
 }
+
+@media (min-width:$desktop) {
+  .personal-data__inner {
+    display:flex;
+  }
+}

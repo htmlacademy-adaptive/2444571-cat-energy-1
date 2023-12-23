@@ -1,0 +1,29 @@
+.product-item {
+  display:flex;
+  flex-direction:column;
+}
+
+
+
+.product-item-add__title {
+  margin:0;
+}
+
+.product-item-add__inner {
+  display:flex;
+  flex-direction:column;
+}
+
+@media (min-width:$tablet) {
+  .product-item-add__inner {
+    flex-direction:row;
+  }
+}
+
+@media (min-width:$desktop) {
+  .product-item-add {
+    display:flex;
+    flex-direction:row;
+  }
+
+}
