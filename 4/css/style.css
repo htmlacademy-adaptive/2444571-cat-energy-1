@@ -39,7 +39,8 @@ body {
 
 .header__menu-link {
   text-decoration: none;
-  color: black;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 320px) {
@@ -73,21 +74,24 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 40px 20px;
+  background: #F2F2F2;
 }
 
 @media (min-width: 768px) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 61.5px 30px;
+    padding: 62px 30px;
   }
 }
 @media (min-width: 1440px) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 72.5px 110px;
+    padding: 73px 110px;
   }
 }
 .promo__title {
