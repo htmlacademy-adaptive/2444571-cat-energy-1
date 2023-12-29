@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #F2F2F2
+}
+
+@media (min-width: $tablet) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding:62px 30px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding:73px 110px;
+  }
+}
+
+

@@ -13,6 +13,15 @@
   color:$color-grey;
 }
 
+.example__inner {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.example__statistic-inner {
+  justify-self:center;
+}
+
 .example__statistic-info {
   @include text-styles($font-secondary, $font-size-small, 400, 12px, 0);
   color:$color-grey;
@@ -20,4 +29,55 @@
 
 .example__statistic-count {
   @include text-styles($font-primary, $font-size-title-list, 400, 24px, 0);
+}
+
+
+.example__price-inner {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  grid-column: span 2;
+  text-transform: uppercase;
+}
+
+.example__loss {
+  margin:0px
+}
+
+.example__price {
+  margin: 0px;
+}
+
+@media (min-width:$mobile) {
+  .example__loss {
+    justify-self: end;
+  }
+}
+@media (min-width:$tablet) {
+
+  .example {
+    padding:$section-padding-tablet;
+  }
+  .example__inner {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .example__statistic-inner {
+    grid-row: span 2;
+  }
+  .example__price-inner {
+    flex-direction: column;
+    align-items:flex-end;
+    grid-column: span 1;
+  }
+}
+@media (min-width:$desktop) {
+
+  .example {
+    padding:$section-padding-desktop;
+  }
+
+  .example__price {
+    grid-column: span 2;
+  }
 }

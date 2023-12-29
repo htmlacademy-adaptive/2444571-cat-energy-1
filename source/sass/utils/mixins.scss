@@ -31,3 +31,12 @@
   line-height: $line-height;
   margin: $margin;
 }
+
+@mixin link-styles-reset {
+
+    text-decoration: none;
+    margin:0;
+    padding:0;
+  }
+
+

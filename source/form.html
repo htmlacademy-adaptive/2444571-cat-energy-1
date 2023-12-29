@@ -16,6 +16,17 @@
         <a class="header__title-link" href="#">cat energy</a>
         <button class="header__burger-menu" type="button">
         </button>
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="index.html">главная </a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="catalog.html">каталог продукции</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="form.html">подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="main">
@@ -23,28 +34,48 @@
         <h1 class="feedback__title">Подбор программы</h1>
         <p class="feedback__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="feedback__form" action="#" >
-          <div class="feedback__cat-data cat-data">
-            <label class="cat-data__label" for="name" >ИМЯ:*</label>
-            <input class="cat-data__input" id="name" name="name" type="text"  placeholder="барсик" required>
-            <label class="cat-data__label" for="weight" >Вес (кг):*</label>
-            <input class="cat-data__input" id="weight" name="weight" type="number"  placeholder="7" required>
-            <label class="cat-data__label" for="age" >Возраст (лет):</label>
-            <input class="cat-data__input" id="age" name="age" type="number"  placeholder="7">
-          </div>
-          <div class="feedback__program program-data">
-            <input class="program-data__input" id="minus-weight" type="radio" name="program-type" value="minus-weight">
-            <label class="program-data__label" for="minus-weight" >похудение</label>
-            <input class="program-data__input" id="plus-weight" type="radio" name="program-type" value="plus-weight">
-            <label class="program-data__label" for="plus-weight" >Набор массы</label>
-            <input class="program-data__input" id="unknown" type="radio" name="program-type" value="unknown">
-            <label class="program-data__label" for="unknown" >Не знаю (Нужен ваш совет)</label>
+          <div class="feedback__inner">
+            <div class="feedback__cat-data cat-data">
+              <div class="cat-data__name-inner">
+                <label class="cat-data__label" for="name" >ИМЯ:*</label>
+                <input class="cat-data__input" id="name" name="name" type="text"  placeholder="барсик" required>
+              </div>
+              <div class="cat-data__weight-inner">
+                <label class="cat-data__label" for="weight" >Вес (кг):*</label>
+                <input class="cat-data__input" id="weight" name="weight" type="number"  placeholder="7" required>
+              </div>
+              <div class="cat-data__age-inner">
+                <label class="cat-data__label" for="age" >Возраст (лет):</label>
+                <input class="cat-data__input" id="age" name="age" type="number"  placeholder="7">
+              </div>
+            </div>
+            <div class="feedback__program program-data">
+              <div class="program-data__minus-weight-inner">
+                <input class="program-data__input" id="minus-weight" type="radio" name="program-type" value="minus-weight">
+                <label class="program-data__label" for="minus-weight" >похудение</label>
+              </div>
+              <div class="program-data__plus-weight-inner">
+                <input class="program-data__input" id="plus-weight" type="radio" name="program-type" value="plus-weight">
+                <label class="program-data__label" for="plus-weight" >Набор массы</label>
+              </div>
+              <div class="program-data__unknow-inner">
+                <input class="program-data__input" id="unknown" type="radio" name="program-type" value="unknown">
+                <label class="program-data__label" for="unknown" >Не знаю (Нужен ваш совет)</label>
+              </div>
+            </div>
           </div>
           <div class="feedback__personal-data personal-data">
             <h3 class="personal-data__title">Контактные данные (владельца кота)</h3>
-            <label class="personal-data__label" for="e-mail" >E-mail:*</label>
-            <input class="personal-data__input" id="e-mail" type="email" name="email"  placeholder="kuklachev@gmail.com" required>
-            <label class="personal-data__label" for="phone" >Телефон:*</label>
-            <input class="personal-data__input" id="phone" type="tel" name="phone"  placeholder="8 (960) 900-60-90" required>
+            <div class="personal-data__inner">
+              <div class="personal__data__email-inner">
+                <label class="personal-data__label" for="e-mail" >E-mail:*</label>
+                <input class="personal-data__input" id="e-mail" type="email" name="email"  placeholder="kuklachev@gmail.com" required>
+              </div>
+                <div class="personal-data__phone-inner">
+                  <label class="personal-data__label" for="phone" >Телефон:*</label>
+                  <input class="personal-data__input" id="phone" type="tel" name="phone"  placeholder="8 (960) 900-60-90" required>
+                </div>
+            </div>
           </div>
           <div class="feedback__comment comment">
             <h3 class="comment__title">Комментарий</h3>
@@ -53,14 +84,24 @@
           </div>
           <div class="feedback__addition addition">
             <h3 class="addition__title">Дополнительно</h3>
-            <input class="addition__checkbox" id="sugar-free" type="checkbox" name="sugar-free" checked>
-            <label class="addition__label" for="sugar-free">сахарозаменитель</label>
-            <input class="addition__checkbox" id="water" type="checkbox" name="water">
-            <label class="addition__label" for="water">питьевая вода</label>
-            <input class="addition__checkbox" id="milk" type="checkbox" name="milk">
-            <label class="addition__label" for="milk">молоко</label>
-            <input class="addition__checkbox" id="vitamins" type="checkbox" name="vitamins">
-            <label class="addition__label" for="vitamins">витамины</label>
+            <div class="addition__inner">
+              <div class="addition__sugar-free-inner">
+                <input class="addition__checkbox" id="sugar-free" type="checkbox" name="sugar-free" checked>
+                <label class="addition__label" for="sugar-free">сахарозаменитель</label>
+              </div>
+              <div class="addition__water-inner">
+                <input class="addition__checkbox" id="water" type="checkbox" name="water">
+                <label class="addition__label" for="water">питьевая вода</label>
+              </div>
+              <div class="addition__milk-inner">
+                <input class="addition__checkbox" id="milk" type="checkbox" name="milk">
+                <label class="addition__label" for="milk">молоко</label>
+              </div>
+              <div class="addition__vitamins-inner">
+                <input class="addition__checkbox" id="vitamins" type="checkbox" name="vitamins">
+                <label class="addition__label" for="vitamins">витамины</label>
+              </div>
+            </div>
           </div>
           <button class="feedback__button" type="submit">отправить заявку</button>
           <span class="feedback__rules">* — Обязательные поля</span>
@@ -90,7 +131,7 @@
           <a class="social-links__url-wrapper" href="#" ></a>
         </li>
         <li class="social-links__item">
-          <a class="social-links__url-wrapper" href="#" ></a>>
+          <a class="social-links__url-wrapper" href="#" ></a>
         </li>
       </ul>
       <div class="footer__academy academy">

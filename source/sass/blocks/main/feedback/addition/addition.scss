@@ -1,3 +1,22 @@
+
+.addition__inner {
+  display:grid;
+  grid-template-columns: 174px;
+}
 .addition__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0)
+}
+
+@media (min-width:$tablet) {
+  .addition__inner {
+    grid-template-columns: repeat(2,224px);
+    grid-template-rows: repeat(2,1fr);
+  }
+}
+
+@media (min-width:$desktop) {
+  .addition__inner {
+    grid-template-columns: repeat(4,189px);
+    grid-template-rows: 1fr;
+  }
 }

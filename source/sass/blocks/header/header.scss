@@ -1,5 +1,52 @@
 
 .header {
-  display:flex;
+  display:grid;
+  grid-template-columns: 2fr 3fr;
   padding: 13px 21px 14px 20px;
 }
+
+.header__navigation {
+  display:flex;
+  justify-content: space-between;
+}
+
+.header__menu-list {
+  @include list-styles
+}
+
+.header__menu-link {
+  @include link-styles-reset
+}
+
+@media (min-width: $mobile) {
+  .header__menu-list {
+    display:none;
+  }
+}
+
+@media (min-width: $tablet) {
+
+  .header {
+    grid-template-columns:1fr 10fr;
+    padding:25px 34px 20px 25px;
+  }
+
+  .header__burger-menu {
+    display:none;
+  }
+  .header__menu-list {
+    display:flex;
+    justify-content:flex-end;
+    gap:32px;
+    flex-grow:1;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $desktop) {
+  .header {
+    padding:55px 110px 32px 110px;
+  }
+}
+
+

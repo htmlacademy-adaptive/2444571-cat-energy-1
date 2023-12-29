@@ -1,5 +1,6 @@
 .programs {
   padding:$section-padding;
+
 }
 
 .programs__title {
@@ -8,6 +9,8 @@
 
 .programs__list {
   @include list-styles;
+  display:flex;
+  flex-direction: column;
 }
 
 .programs__item {
@@ -23,3 +26,28 @@
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   color:$color-grey;
 }
+
+@media (min-width: $mobile) {
+  .program__title::before {
+    content:url('../source/img/index/cat-back.svg');
+    display:block;
+    width:36px;
+    height:50px
+  }
+}
+
+@media (min-width: $desktop) {
+  .programs {
+    padding:$section-padding-tablet;
+  }
+}
+
+@media (min-width:$desktop) {
+  .programs {
+    padding:$section-padding-desktop;
+  }
+  .programs__list{
+    flex-direction:row;
+  }
+}
+
