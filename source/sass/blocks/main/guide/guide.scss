@@ -1,5 +1,8 @@
 .guide {
+
   padding:$section-padding;
+  padding-bottom:49px;
+
 }
 
 .guide__title {
@@ -13,27 +16,119 @@
   grid-template-columns: 1fr;
   gap:26px;
 }
+.guide-list__item {
+  display: flex;
+  align-items: center;
+}
 
-.guide-item__content {
+.guide-list__content {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   color:$color-grey;
+  display:flex;
+  gap:20px;
+  align-items:center;
+
 }
+.guide-list__content--tree {
+  &::before {
+    content:url('../img/index/icons/list_img_1.svg');
+    width:60px;
+    height:60px;
+  }
+}
+.guide-list__content--water {
+  &::before {
+    content:url('../img/index/icons/list_img_2.svg');
+    width:60px;
+    height:60px;
+  }
+}
+.guide-list__content--fork {
+  &::before {
+    content:url('../img/index/icons/list_img_3.svg');
+    width:60px;
+    height:60px;
+  }
+}
+
+.guide-list__content--gram {
+  &::before {
+    content:url('../img/index/icons/list_img_4.svg');
+    width:60px;
+    height:60px;
+  }
+}
+
 
 @media (min-width:$tablet) {
 
   .guide {
     padding:$section-padding-tablet;
+    padding-bottom: 47px;
   }
 
   .guide__list {
-    grid-template: 1fr 1fr/1fr 1fr;
+    grid-template: 230px 230px/280px 280px;
     gap:37px 153px;
+    align-items:flex-start;
+  }
+
+  .guide-list__item {
+    position: relative;
+  }
+  .guide-list__item--counter-one {
+      &::after {
+        content:"1";
+        left:120px;
+      }
+  }
+  .guide-list__item--counter-two {
+    &::after {
+      content:"2";
+      left:100px;
+    }
+  }
+
+  .guide-list__item--counter-three {
+    &::after {
+      content:"3";
+      left:120px;
+    }
+  }
+
+  .guide-list__item--counter-four {
+    &::after {
+      content:"4";
+      left:100px;
+    }
+  }
+
+  .guide-list__item--counter-one,
+  .guide-list__item--counter-two,
+  .guide-list__item--counter-three,
+  .guide-list__item--counter-four{
+      &::after {
+        @include title-styles($font-primary,280px, 400, 280px,0);
+        color:$background-grey;
+        position: absolute;
+        z-index:-1;
+        top:-43px;
+      }
+  }
+
+  .guide-list__content {
+    flex-direction: column;
+    font-size:16px;
+    line-height: 24px;
+    align-items: flex-start;
+    max-width:204px;
   }
 }
 @media (min-width:$desktop) {
 
   .guide {
     padding:$section-padding-desktop;
+    padding-bottom:70px;
   }
 
   .guide__list {

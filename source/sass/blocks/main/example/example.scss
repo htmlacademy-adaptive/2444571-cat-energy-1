@@ -1,5 +1,8 @@
 .example {
+  background-color:$background-grey;
   padding:25px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .example__title {
@@ -14,12 +17,20 @@
 }
 
 .example__inner {
+  align-self:center;
+  gap:20px 32px;
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(124px, 1fr) minmax(124px, 1fr);
   grid-template-rows: 1fr 1fr;
+  margin-top:20px;
+  text-align:center;
 }
 .example__statistic-inner {
   justify-self:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:8px;
 }
 
 .example__statistic-info {
@@ -38,6 +49,7 @@
   align-items:center;
   grid-column: span 2;
   text-transform: uppercase;
+  height: fit-content;
 }
 
 .example__loss {
@@ -56,11 +68,17 @@
 @media (min-width:$tablet) {
 
   .example {
+    background-color:#FFFFFF;
     padding:$section-padding-tablet;
+    padding-top:45px;
+    border-top:1px solid $background-grey;
   }
   .example__inner {
-    grid-template-columns: 1fr 1fr 1fr;
+    width:100%;
+    align-self:flex-start;
+    grid-template-columns: 164px 164px 1fr;
     grid-template-rows: 1fr;
+    padding-top:55px;
   }
   .example__statistic-inner {
     grid-row: span 2;
@@ -75,6 +93,23 @@
 
   .example {
     padding:$section-padding-desktop;
+    padding-top:40px; //TODO как тут паддинг норм сделать? изза цифр в блоке выше и абсолюта оталиквается от текста
+    padding-bottom:75px;
+    border-top:none;
+  }
+  .example__text,
+  .example__inner {
+    background-color: $background-grey;
+  }
+  .example__inner {
+    grid-template-columns: 162px 162px;
+    grid-template-rows: 1fr;
+    margin-top:0px;
+  }
+  .example__price-inner {
+    flex-direction: row;
+    grid-column: span 2;
+    justify-content: space-around;
   }
 
   .example__price {

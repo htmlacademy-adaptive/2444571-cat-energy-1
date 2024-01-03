@@ -15,6 +15,7 @@
 
 .programs__item {
   margin:20px 0;
+  background-color: $background-grey;
 }
 
 .program__title {
@@ -25,21 +26,63 @@
 .program__text {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   color:$color-grey;
+  padding:22px 33px 23px 20px;
+}
+
+.program__link {
+  @include link-styles-reset;
+  @include text-styles($font-primary, 16px, 400, 16px, 0);
+  text-transform: uppercase;
+  padding:4px 0;
+  margin:15px 126px 18px 20px;
+  display:inline-block;
+    &::after {
+      content:url('../img/index/icons/icon_arrow.svg');
+      width:32px;
+      height:10px;
+      margin-left:10px;
+    }
 }
 
 @media (min-width: $mobile) {
-  .program__title::before {
-    content:url('../source/img/index/cat-back.svg');
-    display:block;
-    width:36px;
-    height:50px
+  .program__title--slim {
+      &::before {
+        content:url('../img/index/icons/cat_back_slim.svg');
+        display:inline-block;
+        width:36px;
+        height:50px;
+        margin-right:27px;
+        padding:24px 0 0 20px;
+        vertical-align:bottom;
+      }
+  }
+  .program__title--fat {
+      &::before {
+        content:url('../img/index/icons/cat_back_fat.svg');
+        display:inline-block;
+        width:36px;
+        height:50px;
+        margin-right:43px;
+        padding:24px 0 0 20px;
+        vertical-align:bottom;
+      }
+  }
+  .program__break-hr {
+    border:1px solid #D9D9D9;
+    max-width:85%;
+    margin:0 auto;
+
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $tablet) {
   .programs {
     padding:$section-padding-tablet;
   }
+  .program__break-hr {
+    display:none;
+  }
+
 }
 
 @media (min-width:$desktop) {
@@ -48,6 +91,26 @@
   }
   .programs__list{
     flex-direction:row;
+    gap:80px;
+  }
+  .programs__item {
+    flex-basis:570px;
+  }
+  .program__title--slim,
+  .program__title--fat{
+      &::before {
+        padding:41px 0 0 52px;
+
+      }
+  }
+  .program__text {
+    padding:39px 61px 27px 52px;
+  }
+  .program__link {
+    margin:27px 350px 55px 52px;
+      &::after {
+        margin-left:25px;
+      }
   }
 }
 
