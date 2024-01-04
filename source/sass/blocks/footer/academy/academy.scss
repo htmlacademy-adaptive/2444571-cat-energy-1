@@ -1,0 +1,20 @@
+.academy__link {
+  @include link-styles-reset;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:280px;
+}
+.academy__text {
+  @include text-styles($font-secondary,16px, 400, 20px, 0);
+  color:$color-grey;
+}
+
+@media (min-width:$tablet) {
+  .academy__link {
+    width:168px;
+    gap:23px;
+
+  }
+
+}

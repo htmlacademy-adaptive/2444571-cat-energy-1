@@ -1,4 +1,22 @@
 .social-links {
   @include list-styles;
   display: flex;
+  gap:24px;
+}
+.social-links__url-vk {
+    &::before {
+      content:url('../img/index/icons/vkontakte.svg')
+    }
+}
+
+.social-links__url-youtube {
+  &::before {
+    content:url('../img/index/icons/youtube.svg')
+  }
+}
+
+.social-links__url-telegram {
+  &::before {
+    content:url('../img/index/icons/telegram.svg')
+  }
 }

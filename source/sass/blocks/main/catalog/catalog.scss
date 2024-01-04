@@ -5,6 +5,9 @@
 
 .catalog__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
+  padding: 27px 42px 41px 20px;
+  white-space:nowrap;
+  border-top: 1px solid #D9D9D9;
 }
 
 .catalog__product-list {

@@ -14,3 +14,13 @@ burgerBtn.addEventListener('click', ()=>{
     burgerBtn.classList.add('header__burger-menu--closed')
   }
 })
+
+const address = document.querySelector('.address')
+const currentUrl = window.location.href
+const urlParts = currentUrl.split("/");
+const lastPart = urlParts[urlParts.length - 1];
+if(lastPart === "catalog.html") {
+  address.classList.add('address--grey')
+} else {
+  address.classList.remove('address--grey')
+}

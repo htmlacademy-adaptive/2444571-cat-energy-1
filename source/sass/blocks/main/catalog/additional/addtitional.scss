@@ -4,17 +4,68 @@
 
 .additional__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 24px, 0);
+  padding:25px 0 36px 0px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+    &::after {
+      content:"";
+      display:inline-block;
+      width:54px;
+      height:2px;
+      background-color:$background-green;
+      position: absolute;
+      right: -21px;
+    }
 }
 
 @media (min-width:$tablet) {
   .additional {
-    padding:70 30px;
+    padding:70px 30px;
+  }
+  .additional__title {
+    @include title-styles($font-primary, 36px, 400, 36px, 0);
+    margin-left:40px;
+    padding-bottom:80px;
+    &::after {
+      width:320px;
+      right:-31px;
+    }
+    &::before {
+      content:"";
+      display:inline-block;
+      width:30px;
+      height:2px;
+      background-color:$background-green;
+      position: absolute;
+      left: -71px;
+    }
   }
 }
 
 @media (min-width:$desktop) {
   .additional {
     padding:76px 110px;
+  }
+
+  .additional__title {
+    @include title-styles($font-primary, 36px, 400, 36px, 0);
+    margin-left:0px;
+    padding-bottom:80px;
+    &::after {
+      width:952px;
+      right:-104px;
+    }
+    &::before {
+      content:"";
+      display:inline-block;
+      width:70px;
+      height:2px;
+      background-color:$background-green;
+      position: absolute;
+      left: -110px;
+    }
   }
 }
 

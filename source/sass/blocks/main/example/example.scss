@@ -92,14 +92,20 @@
 @media (min-width:$desktop) {
 
   .example {
-    padding:$section-padding-desktop;
-    padding-top:40px; //TODO как тут паддинг норм сделать? изза цифр в блоке выше и абсолюта оталиквается от текста
-    padding-bottom:75px;
+    padding:0px;
+    // padding-top:40px; //TODO как тут паддинг норм сделать? изза цифр в блоке выше и абсолюта оталиквается от текста
+    // padding-bottom:75px;
     border-top:none;
   }
-  .example__text,
-  .example__inner {
+  .example__title-inner {
+    padding:69px 0px 76px 110px;
+  }
+  .example__content-inner {
+    padding:70px 0px 75px 110px;
     background-color: $background-grey;
+  }
+  .example__text {
+    padding:0px;
   }
   .example__inner {
     grid-template-columns: 162px 162px;
