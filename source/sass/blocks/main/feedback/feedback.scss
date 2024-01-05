@@ -1,15 +1,17 @@
 .feedback {
   padding:27px 20px 24px 20px;
   max-width:$mobile;
-  margin:0 auto;
+  // margin:0 auto;
 }
 
 .feedback__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
+  margin-bottom:37px;
 }
 
 .feedback__text {
   @include title-styles($font-primary, 14px, 400, 18px, 0);
+  margin-bottom:39px;
   text-transform: uppercase;
 }
 

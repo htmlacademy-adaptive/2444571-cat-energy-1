@@ -15,12 +15,32 @@ burgerBtn.addEventListener('click', ()=>{
   }
 })
 
-const address = document.querySelector('.address')
-const currentUrl = window.location.href
-const urlParts = currentUrl.split("/");
-const lastPart = urlParts[urlParts.length - 1];
-if(lastPart === "catalog.html") {
-  address.classList.add('address--grey')
-} else {
-  address.classList.remove('address--grey')
+function currentPath () {
+  const currentUrl = window.location.href
+  const urlParts = currentUrl.split("/");
+  const lastPart = urlParts[urlParts.length - 1];
+  return lastPart
 }
+
+function addGrayBackground(url,className, element) {
+  const el = document.querySelector(element)
+  const lastPart = currentPath();
+  if(lastPart === url) {
+    el.classList.add(className)
+  } else {
+    el.classList.remove(className)
+  }
+}
+
+function addActiveLinkTablet () {
+  const screenWidth = window.innerWidth
+  const lastPart = currentPath()
+  const element = document.querySelector(`a[href="${lastPart}"]`)
+  if (screenWidth >= 768) {
+    element.classList.add('header__menu-link--active')
+  }
+}
+
+addGrayBackground("catalog.html", "address--grey", ".address")
+addActiveLinkTablet()
+
