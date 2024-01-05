@@ -2,9 +2,39 @@
 .addition__inner {
   display:grid;
   grid-template-columns: 174px;
+  gap:13px;
+  padding:34px 0;
 }
 .addition__title {
-  @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0)
+  @include title-styles($font-primary, 24px, 400, 26px, 0)
+}
+
+.addition__checkbox {
+  display:none;
+  &:checked + .addition__label::after {
+    content: url('../img/form/checkbox/checkbox_tick.svg');
+    display:inline-block;
+    width:26px;
+    height: 26px;
+    position:absolute;
+    left:2px;
+  }
+}
+.addition__label {
+  @include title-styles($font-primary, 16px, 400, 26px, 0);
+  text-transform: uppercase;
+  color:$color-grey;
+  display:flex;
+  align-items: center;
+  gap:15px;
+  position: relative;
+    &::before {
+      content: url('../img/form/checkbox/checkbox_clear.svg');
+      display:inline-block;
+      width:30px;
+      height: 30px;
+    }
+
 }
 
 @media (min-width:$tablet) {

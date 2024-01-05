@@ -41,3 +41,27 @@
   align-items: center;
   gap:13px;
 }
+
+@media (min-width: $tablet) {
+  .cat-data__label {
+    @include text-styles($font-primary, 20px, 400, normal, 0);
+  }
+  .cat-data__input {
+    &::placeholder {
+      @include text-styles($font-primary, 20px, 400, normal, 0);
+    }
+    &:not(:placeholder-shown) {
+      @include text-styles($font-primary, 20px, 400, normal, 0);
+    }
+  }
+}
+
+@media (min-width:$desktop) {
+  .cat-data {
+    flex-basis:50%;
+    gap:20px;
+  }
+  .cat-data__input {
+    height: 48px;
+  }
+}

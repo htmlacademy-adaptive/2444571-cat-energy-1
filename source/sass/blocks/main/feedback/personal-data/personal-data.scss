@@ -1,9 +1,128 @@
+
+.personal-data {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding-bottom:24px;
+}
+
 .personal-data__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 26px;
+  margin-bottom:35px;
+    &::after {
+      content:"";
+      display:inline-block;
+      width:93px;
+      height:2px;
+      background-color:$background-green;
+      position: absolute;
+      right: -21px;
+    }
+}
+
+.personal-data__inner {
+  display:flex;
+  flex-direction: column;
+  gap:14px;
+}
+.personal-data__input {
+  flex-grow:1;
+  height:45px;
+  border:1px solid #E7E7E7;
+    &::placeholder {
+      @include text-styles($font-primary, 16px, 400, 18px, 0);
+      text-transform: uppercase;
+      color:$color-grey;
+      padding:14px 164px 13px 15px;
+    }
+    &:not(:placeholder-shown) {
+      @include text-styles($font-primary, 16px, 400, 18px, 0);
+      text-transform: uppercase;
+      color:$color-grey;
+      padding-left:15px;
+    }
+    &:focus {
+      outline: none;
+      border:2px solid $color-grey;
+    }
+    &:invalid:not(:placeholder-shown) {
+      border:2px solid #FF8282;
+    }
+}
+
+.personal-data__label {
+  @include text-styles($font-primary, 16px, 400, 18px, 0);
+  text-transform: uppercase;
+  color:$color-grey;
+}
+.personal__data__email-inner,
+.personal-data__phone-inner {
+  display:flex;
+  gap:13px;
+  align-items: center;
+  position: relative;
+}
+.personal-data__label--icon-email {
+    &::after {
+      content:url('../img/form/text/email_icon_input.svg');
+      display:inline-block;
+      width:20px;
+      height: 20px;
+      position:absolute;
+      right: 12px;
+    }
+}
+
+.personal-data__label--icon-phone {
+  &::after {
+    content:url('../img/form/text/phone_icon_input.svg');
+    display:inline-block;
+    width:20px;
+    height: 20px;
+    position:absolute;
+    right: 12px;
+  }
+}
+
+
+@media (min-width:$tablet) {
+  .personal-data {
+    padding-bottom:65px;
+  }
+  .personal-data__input {
+      &::placeholder {
+        @include text-styles($font-primary, 20px, 400, normal, 0);
+      }
+      &:not(:placeholder-shown) {
+        @include text-styles($font-primary, 20px, 400, normal, 0);
+      }
+  }
+  .personal-data__label {
+    @include text-styles($font-primary, 20px, 400, normal, 0);
+  }
+  .personal-data__title {
+    @include text-styles($font-primary, 36px, 400, 36px, 0);
+    margin-bottom:76px;
+  }
+
 }
 
 @media (min-width:$desktop) {
+  .personal-data {
+    padding-bottom:70px;
+  }
   .personal-data__inner {
     display:flex;
+    flex-direction: row;
+    gap:80px;
+  }
+  .personal__data__email-inner,
+  .personal-data__phone-inner {
+    flex-basis: 50%;
   }
 }

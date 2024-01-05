@@ -32,7 +32,7 @@
   display:none;
     &:checked + .program-data__label::before {
       content: url('../img/form/radio/radiobutton_checked.svg');
-      width: 30px; /* Диаметр круга */
+      width: 30px;
       height: 30px;
     }
 }
@@ -53,5 +53,49 @@
       width: 30px;
       height: 30px;
     }
+}
+
+@media (min-width: $tablet) {
+  .program-data {
+    &::before {
+      display:none;
+    }
+    &::after {
+      display:none;
+    }
+    border:1px solid #E7E7E7;
+    padding:23px 0px 27px 23px;
+    height: 144px;
+    justify-content: space-around; //TODO сомнительно, не понимаю как норм сделать высоту.
+  }
+
+  .program-data__label {
+    @include text-styles($font-primary, 20px, 400, normal, 0);
+    padding-left:50px;
+    &::before {
+      content: url('../img/form/radio/radiobutton_clear.svg');
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .program-data__input {
+    display:none;
+      &:checked + .program-data__label::before {
+        width: 40px;
+        height: 40px;
+      }
+  }
+}
+@media (min-width:$desktop) {
+  .program-data {
+    flex-basis:50%;
+    gap:13px;
+  }
+  .program-data__label {
+      &::before {
+        transform: translateY(-37%); //TODO не понимаю как подругоу отцентрвоать радиобаттон и текст лейбла
+      }
+  }
 }
 

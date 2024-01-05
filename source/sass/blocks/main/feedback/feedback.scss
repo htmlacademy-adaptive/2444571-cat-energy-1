@@ -31,6 +31,7 @@
   .feedback__inner {
     display:flex;
     justify-content: space-between;
+    padding-bottom: 24px;
   }
 }
 
@@ -45,9 +46,19 @@
     max-width:$tablet;
     margin:0 auto;
   }
-
+  .feedback__title {
+    @include title-styles($font-primary, 60px, 400, 60px, 0);
+    margin-bottom:54px;
+  }
   .feedback__rules {
     display:inline-block;
+  }
+  .feedback__text {
+    @include title-styles($font-primary, 20px, 400, 30px, 0);
+    margin-bottom:66px;
+  }
+  .feedback__inner{
+    padding-bottom: 65px;
   }
 
 }
@@ -56,6 +67,12 @@
   .feedback {
     max-width:$desktop;
     margin:0 auto;
+  }
+  .feedback__text {
+    max-width:323px;
+  }
+  .feedback__inner {
+    gap:80px;
   }
 
 }
