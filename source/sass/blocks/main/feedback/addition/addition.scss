@@ -41,6 +41,25 @@
   .addition__inner {
     grid-template-columns: repeat(2,224px);
     grid-template-rows: repeat(2,1fr);
+    padding:57px 0 52px 0;
+    column-gap:132px;
+    row-gap: 23px;
+  }
+  .addition__title {
+    @include title-styles($font-primary, 36px, 400, 36px, 0)
+  }
+  .addition__label {
+    @include title-styles($font-primary, 20px, 400, normal, 0);
+    gap:20px;
+    &::before {
+      width:40px;
+      height: 40px;
+    }
+  }
+  .addition__checkbox {
+    &:checked + .addition__label::after {
+      top:2px;
+    }
   }
 }
 
@@ -48,5 +67,10 @@
   .addition__inner {
     grid-template-columns: repeat(4,189px);
     grid-template-rows: 1fr;
+    column-gap:104px;
+  }
+  .addition__label {
+    display: flex;
+    align-items: unset;
   }
 }

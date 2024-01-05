@@ -41,6 +41,7 @@ function addActiveLinkTablet () {
   }
 }
 
-addGrayBackground("catalog.html", "address--grey", ".address")
+addGrayBackground("catalog.html", "address--grey", ".address");
+addGrayBackground("form.html", "address--grey", ".address")
 addActiveLinkTablet()
 
