@@ -100,5 +100,11 @@
   }
   .product-item__link {
     margin-top:auto;
+    &:hover {
+      background-color:$background-green-hover;
+    }
+    &:active{
+      color: rgba($color-white, 0.3);
+    }
   }
 }

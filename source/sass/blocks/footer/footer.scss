@@ -8,7 +8,7 @@
 }
 .footer__link-title {
     &::before {
-      content:url('../img/index/icons/footer_logo.svg')
+      content:url('../img/index/icons/footer_logo.svg');
     }
 }
 .footer__break-hr {
@@ -33,6 +33,11 @@
     flex-direction: row;
     justify-content: space-between;
     padding:73px 110px;
+  }
+  .footer__link-title{
+    &:hover::before {
+      filter: grayscale(80%); //TODO как сделать ховер для свг??
+    }
   }
 }
 

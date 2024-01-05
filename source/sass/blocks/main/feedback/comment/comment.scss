@@ -1,6 +1,17 @@
 .comment__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0);
   margin-bottom: 38px;
+  display:flex;
+  align-items: center;
+  &::after {
+    content:"";
+    display:inline-block;
+    width:159px;
+    height:2px;
+    background-color:$background-green;
+    position: absolute;
+    right: 0px;
+  }
 }
 
 .comment__label {
@@ -13,6 +24,7 @@
   border:1px solid #E7E7E7;
   margin-bottom:23px;
   height: 150px;
+  box-sizing: border-box;
     &::placeholder {
       @include text-styles($font-primary, 16px, 400, 18px, 0);
       text-transform: uppercase;
@@ -33,6 +45,18 @@
   .comment__title {
     @include text-styles($font-primary, 36px, 400, 36px, 0);
     margin-bottom:87px;
+    &::after {
+      width:476px;
+    }
+    &::before {
+      content:"";
+      display:inline-block;
+      width:30px;
+      height:2px;
+      background-color:$background-green;
+      position: absolute;
+      left: 0px;
+    }
   }
   .comment__textarea {
     margin-bottom: 65px;
@@ -49,6 +73,12 @@
 @media (min-width:$desktop) {
   .comment__title {
     margin-bottom:78px;
+    &::after {
+      width:1108px;
+    }
+    &::before {
+      width:70px;
+    }
   }
   .comment__textarea {
     margin-bottom: 70px;

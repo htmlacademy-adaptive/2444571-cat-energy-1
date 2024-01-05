@@ -64,5 +64,8 @@
   }
   .show-more__link {
     padding:10px 39px;
+      &:hover{
+        background-color: #EBEBEB;
+      }
   }
 }

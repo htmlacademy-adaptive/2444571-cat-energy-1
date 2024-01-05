@@ -1,6 +1,6 @@
 .feedback {
-  padding:27px 20px 24px 20px;
-  max-width:$mobile;
+  padding:27px 20px 0px 20px;
+  // max-width:$mobile;
   // margin:0 auto;
 }
 
@@ -50,9 +50,9 @@
 
 @media (min-width:$tablet) {
   .feedback {
-    max-width:$tablet;
-    margin:0 auto;
-    padding:27px 70px;
+    // max-width:$tablet;
+    // margin:0 auto;
+    padding:27px 70px 0 70px;
   }
   .feedback__title {
     @include title-styles($font-primary, 60px, 400, 60px, 0);
@@ -85,9 +85,9 @@
 
 @media (min-width:$desktop) {
   .feedback {
-    max-width:$desktop;
-    margin:0 auto;
-    padding:27px 110px;
+    // max-width:$desktop;
+    // margin:0 auto;
+    padding:27px 110px 0 110px;
   }
   .feedback__text {
     max-width:323px;
@@ -101,6 +101,12 @@
 
   .feedback__button {
     max-width:570px;
+    &:hover {
+      background-color:$background-green-hover;
+    }
+    &:active{
+      color: rgba($color-white, 0.3);
+    }
   }
 
 }

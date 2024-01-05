@@ -103,6 +103,12 @@
   .product-item-add__button {
     margin-bottom: 0px;
     min-width:224px;
+    &:hover {
+      background-color:$background-green-hover;
+    }
+    &:active{
+      color: rgba($color-white, 0.3);
+    }
 
   }
 

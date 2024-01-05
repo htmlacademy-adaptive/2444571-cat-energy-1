@@ -22,6 +22,9 @@
     max-width:$tablet;
     padding:0 30px;
   }
+  .catalog__title {
+    border-top: none;
+  }
 
   .catalog__product-list {
     grid-template-columns: repeat(2, 324px);

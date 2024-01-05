@@ -38,6 +38,7 @@
   display:inline-block;
     &::after {
       content:url('../img/index/icons/icon_arrow.svg');
+      display:inline-block;
       width:32px;
       height:10px;
       margin-left:10px;
@@ -110,6 +111,9 @@
     margin:27px 350px 55px 52px;
       &::after {
         margin-left:25px;
+      }
+      &:active {
+        opacity: 0.3;
       }
   }
 }

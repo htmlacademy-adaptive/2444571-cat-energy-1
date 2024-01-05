@@ -6,7 +6,18 @@
   padding:34px 0;
 }
 .addition__title {
-  @include title-styles($font-primary, 24px, 400, 26px, 0)
+  @include title-styles($font-primary, 24px, 400, 26px, 0);
+  display:flex;
+  align-items: center;
+  &::after {
+    content:"";
+    display:inline-block;
+    width:139px;
+    height:2px;
+    background-color:$background-green;
+    position: absolute;
+    right: 0px;
+  }
 }
 
 .addition__checkbox {
@@ -46,7 +57,19 @@
     row-gap: 23px;
   }
   .addition__title {
-    @include title-styles($font-primary, 36px, 400, 36px, 0)
+    @include title-styles($font-primary, 36px, 400, 36px, 0);
+    &::after {
+      width:446px;
+    }
+    &::before {
+      content:"";
+      display:inline-block;
+      width:30px;
+      height:2px;
+      background-color:$background-green;
+      position: absolute;
+      left: 0px;
+    }
   }
   .addition__label {
     @include title-styles($font-primary, 20px, 400, normal, 0);
@@ -64,6 +87,14 @@
 }
 
 @media (min-width:$desktop) {
+  .addition__title {
+    &::after {
+      width:1078px;
+    }
+    &::before {
+      width:70px;
+    }
+  }
   .addition__inner {
     grid-template-columns: repeat(4,189px);
     grid-template-rows: 1fr;
