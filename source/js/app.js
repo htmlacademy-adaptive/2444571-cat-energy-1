@@ -1,5 +1,6 @@
 const burgerBtn = document.querySelector('.header__burger-menu')
 const headerMenuList  =document.querySelector('.header__menu-list')
+const screenWidth = window.innerWidth
 
 burgerBtn.addEventListener('click', ()=>{
   if(headerMenuList.classList.contains('header__menu-list--closed')) {
@@ -33,7 +34,6 @@ function addGrayBackground(url,className, element) {
 }
 
 function addActiveLinkTablet () {
-  const screenWidth = window.innerWidth
   const lastPart = currentPath()
   const element = document.querySelector(`a[href="${lastPart}"]`)
   const allElementsExceptLastPart = headerMenuList.querySelectorAll(`a:not([href="${lastPart}"])`)
@@ -45,7 +45,23 @@ function addActiveLinkTablet () {
   }
 }
 
+
+function addWhiteColorToLink () {
+  const lastPart = currentPath()
+  if(lastPart === "index.html" && screenWidth >= 1440) {
+    const headerLink = headerMenuList.querySelector('a[href="index.html"]');
+    headerLink.classList.add('header__menu-link--color-white');
+    headerLink.classList.remove('header__menu-link--active');
+    headerLink.classList.add('header__menu-link--active--white');
+    const allElementsExceptLastPart = headerMenuList.querySelectorAll(`a:not([href="index.html"])`)
+    allElementsExceptLastPart.forEach(aTag=> (
+      aTag.classList.add('header__menu-link--color-white')
+    ))
+  }
+}
+
 addGrayBackground("catalog.html", "address--grey", ".address");
 addGrayBackground("form.html", "address--grey", ".address")
 addActiveLinkTablet()
+addWhiteColorToLink ()
 
