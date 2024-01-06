@@ -30,10 +30,20 @@
 
 .program-data__input {
   display:none;
-    &:checked + .program-data__label::before {
-      content: url('../img/form/radio/radiobutton_checked.svg');
-      width: 30px;
-      height: 30px;
+    &:checked + .program-data__label::after {
+      // content: url('../img/form/radio/radiobutton_checked.svg');
+      content:'';
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #68B738;
+      position:absolute;
+      left: 9px;
+      top: 5px; //TODO мб есть лучше варианты как позиционировать, кроме как подгонять по пикселям?
+    }
+    &:disabled + .program-data__label {
+      opacity: 0.3;
+      cursor: not-allowed;
     }
 }
 
@@ -45,13 +55,16 @@
   padding-left: 45px;
   cursor: pointer;
     &::before {
-      content: url('../img/form/radio/radiobutton_clear.svg');
+      // content: url('../img/form/radio/radiobutton_clear.svg');
+      content: '';
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
       width: 30px;
       height: 30px;
+      border-radius: 50%;
+      border:1px solid #CDCDCD;
     }
 }
 
@@ -73,17 +86,25 @@
     @include text-styles($font-primary, 20px, 400, normal, 0);
     padding-left:50px;
     &::before {
-      content: url('../img/form/radio/radiobutton_clear.svg');
+      // content: url('../img/form/radio/radiobutton_clear.svg'); //TODO как лучше рисовать самому или вставлять свг?
+      content: '';
       width: 40px;
       height: 40px;
+      border-radius: 50%;
+      border:1px solid #CDCDCD;
     }
   }
 
   .program-data__input {
     display:none;
-      &:checked + .program-data__label::before {
-        width: 40px;
-        height: 40px;
+      &:checked + .program-data__label::after {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #68B738;
+        position:absolute;
+        left: 12px;
+        top: 6px;
       }
   }
 }
@@ -96,6 +117,20 @@
       &::before {
         transform: translateY(-37%); //TODO не понимаю как подругоу отцентрвоать радиобаттон и текст лейбла
       }
+      &:hover::before {
+        border-color:#BABABA;
+      }
+  }
+  .program-data__input {
+    &:checked + .program-data__label::after {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #68B738;
+      position:absolute;
+      left: 12px;
+      top: 11px;
+    }
   }
 }
 
