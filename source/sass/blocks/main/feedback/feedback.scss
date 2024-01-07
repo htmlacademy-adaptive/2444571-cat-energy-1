@@ -1,35 +1,45 @@
 .feedback {
-  padding:27px 20px 24px 20px;
-  max-width:$mobile;
-  margin:0 auto;
+  padding:27px 20px 0px 20px;
+  // max-width:$mobile;
+  // margin:0 auto;
 }
 
 .feedback__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
+  margin-bottom:37px;
 }
 
 .feedback__text {
   @include title-styles($font-primary, 14px, 400, 18px, 0);
+  margin-bottom:39px;
   text-transform: uppercase;
 }
-
-@media (min-width:$tablet) {
-
-  .feedback {
-    padding:27px 70px;
-  }
+.feedback__button-inner {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:21px;
+  padding-bottom:32px;
 }
+.feedback__button {
+  @include button-styles-reset;
+  @include title-styles($font-primary, 16px, 400, 20px, 0);
+  width:100%;
+  text-transform: uppercase;
+  display:block;
+  padding:10px 44px;
+  background-color: $background-green;
+  color:$color-white;
+}
+.feedback__rules {
+  @include title-styles($font-secondary, 14px, 400, 16px, 0);
+}
+
 
 @media (min-width:$desktop) {
 
-  .feedback {
-    padding:27px 110px;
-  }
 
-  .feedback__inner {
-    display:flex;
-    justify-content: space-between;
-  }
+
 }
 
 @media (min-width:$mobile) {
@@ -40,20 +50,63 @@
 
 @media (min-width:$tablet) {
   .feedback {
-    max-width:$tablet;
-    margin:0 auto;
+    // max-width:$tablet;
+    // margin:0 auto;
+    padding:27px 70px 0 70px;
   }
-
+  .feedback__title {
+    @include title-styles($font-primary, 60px, 400, 60px, 0);
+    margin-bottom:54px;
+  }
   .feedback__rules {
     display:inline-block;
+    @include title-styles($font-secondary, 16px, 400, 16px, 0);
+  }
+  .feedback__text {
+    @include title-styles($font-primary, 20px, 400, 30px, 0);
+    margin-bottom:66px;
+  }
+  .feedback__inner{
+    padding-bottom: 65px;
+  }
+
+  .feedback__button-inner {
+    flex-direction: row;
+    gap:60px;
+    padding-bottom:60px;
+  }
+  .feedback__button {
+    @include title-styles($font-primary, 20px, 400, 26px, 0);
+    max-width:284px;
+    padding:14px 45px;
   }
 
 }
 
 @media (min-width:$desktop) {
   .feedback {
-    max-width:$desktop;
-    margin:0 auto;
+    // max-width:$desktop;
+    // margin:0 auto;
+    padding:27px 110px 0 110px;
+  }
+  .feedback__text {
+    max-width:323px;
+  }
+  .feedback__inner {
+    gap:80px;
+    display:flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+  }
+
+  .feedback__button {
+    max-width:570px;
+    &:hover {
+      background-color:$background-green-hover;
+    }
+    &:active{
+      color: rgba($color-white, 0.3);
+    }
   }
 
 }

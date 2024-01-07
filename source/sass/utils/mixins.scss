@@ -33,10 +33,24 @@
 }
 
 @mixin link-styles-reset {
-
     text-decoration: none;
-    margin:0;
-    padding:0;
+    color: inherit;
+    cursor: pointer;
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
   }
 
+@mixin button-styles-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+}
 

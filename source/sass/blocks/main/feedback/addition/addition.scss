@@ -2,21 +2,113 @@
 .addition__inner {
   display:grid;
   grid-template-columns: 174px;
+  gap:13px;
+  padding:34px 0;
 }
 .addition__title {
-  @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0)
+  @include title-styles($font-primary, 24px, 400, 26px, 0);
+  display:flex;
+  align-items: center;
+  &::after {
+    content:"";
+    display:inline-block;
+    width:139px;
+    height:2px;
+    background-color:$background-green;
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.addition__checkbox {
+  display:none;
+  &:checked + .addition__label::after {
+    content: url('../img/form/checkbox/checkbox_tick.svg');
+    display:inline-block;
+    width:26px;
+    height: 26px;
+    position:absolute;
+    left:2px;
+  }
+  &:disabled + .addition__label {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+.addition__label {
+  @include title-styles($font-primary, 16px, 400, 26px, 0);
+  text-transform: uppercase;
+  color:$color-grey;
+  display:flex;
+  align-items: center;
+  gap:15px;
+  position: relative;
+    &::before {
+      content: url('../img/form/checkbox/checkbox_clear.svg');
+      display:inline-block;
+      width:30px;
+      height: 30px;
+    }
+
 }
 
 @media (min-width:$tablet) {
   .addition__inner {
     grid-template-columns: repeat(2,224px);
     grid-template-rows: repeat(2,1fr);
+    padding:57px 0 52px 0;
+    column-gap:132px;
+    row-gap: 23px;
+  }
+  .addition__title {
+    @include title-styles($font-primary, 36px, 400, 36px, 0);
+    &::after {
+      width:446px;
+    }
+    &::before {
+      content:"";
+      display:inline-block;
+      width:30px;
+      height:2px;
+      background-color:$background-green;
+      position: absolute;
+      left: 0px;
+    }
+  }
+  .addition__label {
+    @include title-styles($font-primary, 20px, 400, normal, 0);
+    gap:20px;
+    &::before {
+      width:40px;
+      height: 40px;
+    }
+  }
+  .addition__checkbox {
+    &:checked + .addition__label::after {
+      top:2px;
+    }
   }
 }
 
 @media (min-width:$desktop) {
+  .addition__title {
+    position: relative;
+    &::after {
+      width:1078px;
+      right:-111px;
+    }
+    &::before {
+      width:70px;
+      left:-111px;
+    }
+  }
   .addition__inner {
     grid-template-columns: repeat(4,189px);
     grid-template-rows: 1fr;
+    column-gap:104px;
+  }
+  .addition__label {
+    display: flex;
+    align-items: unset;
   }
 }
