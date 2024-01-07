@@ -142,11 +142,14 @@
     flex-basis: 50%;
   }
   .personal-data__title {
+    position: relative;
     &::after {
       width:778px;
+      right:-111px;
     }
     &::before {
       width:70px;
+      left:-112px;
     }
   }
 }

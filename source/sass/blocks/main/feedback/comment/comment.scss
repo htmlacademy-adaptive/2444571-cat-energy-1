@@ -73,11 +73,14 @@
 @media (min-width:$desktop) {
   .comment__title {
     margin-bottom:78px;
+    position: relative;
     &::after {
       width:1108px;
+      right: -111px;
     }
     &::before {
       width:70px;
+      left:-110px;
     }
   }
   .comment__textarea {

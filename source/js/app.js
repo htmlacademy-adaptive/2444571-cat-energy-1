@@ -26,11 +26,14 @@ function currentPath () {
 function addGrayBackground(url,className, element) {
   const el = document.querySelector(element)
   const lastPart = currentPath();
+  console.log(el)
   if(lastPart === url) {
     el.classList.add(className)
-  } else {
+    console.log("true")
+  } /* else {
     el.classList.remove(className)
-  }
+    console.log("false")
+  } */
 }
 
 function addActiveLinkTablet () {

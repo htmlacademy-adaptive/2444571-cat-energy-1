@@ -77,6 +77,9 @@ padding:27px 36px 164px 36px;
 }
 
 @media (min-width:$desktop) {
+  .promo {
+    position: relative;
+  }
   .promo__link {
     &:hover {
       background-color:$background-green-hover;
@@ -95,7 +98,7 @@ padding:27px 36px 164px 36px;
     background-size:720px 694px;
     margin:0;
     position: absolute;
-    top: 0;
+    top: -171px;
     right: 0;
     z-index: -1;
       &::before {

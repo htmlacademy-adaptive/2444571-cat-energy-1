@@ -92,11 +92,14 @@
 
 @media (min-width:$desktop) {
   .addition__title {
+    position: relative;
     &::after {
       width:1078px;
+      right:-111px;
     }
     &::before {
       width:70px;
+      left:-111px;
     }
   }
   .addition__inner {
