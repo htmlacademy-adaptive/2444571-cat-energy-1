@@ -6,11 +6,11 @@
   padding: 40px 20px;
   background: $background-grey;
 }
-.footer__link-title {
-    &::before {
-      content:url('../img/index/icons/footer_logo.svg');
-    }
-}
+// .footer__link-title {
+//     &::before {
+//       content:url('../img/index/icons/footer_logo.svg');
+//     }
+// }
 .footer__break-hr {
   width:100%;
   border: 1px solid #D9D9D9;
@@ -34,10 +34,19 @@
     justify-content: space-between;
     padding:73px 110px;
   }
-  .footer__link-title{
-    &:hover::before {
-      filter: grayscale(80%); //TODO как сделать ховер для свг??
-    }
+  // .footer__link-title{
+  //   &:hover::before {
+  //     filter: grayscale(80%); //TODO как сделать ховер для свг??
+  //     fill:red;
+  //   }
+  // }
+  .footer__link-title  {
+      &:hover svg path {
+        fill:#3E3E3E;
+      }
+      &:active svg path {
+        fill:#6B6B6B;
+      }
   }
 }
 

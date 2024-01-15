@@ -23,19 +23,6 @@ function currentPath () {
   return lastPart
 }
 
-function addGrayBackground(url,className, element) {
-  const el = document.querySelector(element)
-  const lastPart = currentPath();
-  console.log(el)
-  if(lastPart === url) {
-    el.classList.add(className)
-    console.log("true")
-  } /* else {
-    el.classList.remove(className)
-    console.log("false")
-  } */
-}
-
 function addActiveLinkTablet () {
   const lastPart = currentPath()
   const element = document.querySelector(`a[href="${lastPart}"]`)
@@ -48,23 +35,6 @@ function addActiveLinkTablet () {
   }
 }
 
-
-function addWhiteColorToLink () {
-  const lastPart = currentPath()
-  if(lastPart === "index.html" && screenWidth >= 1440) {
-    const headerLink = headerMenuList.querySelector('a[href="index.html"]');
-    headerLink.classList.add('header__menu-link--color-white');
-    headerLink.classList.remove('header__menu-link--active');
-    headerLink.classList.add('header__menu-link--active--white');
-    const allElementsExceptLastPart = headerMenuList.querySelectorAll(`a:not([href="index.html"])`)
-    allElementsExceptLastPart.forEach(aTag=> (
-      aTag.classList.add('header__menu-link--color-white')
-    ))
-  }
-}
-
-addGrayBackground("catalog.html", "address--grey", ".address");
-addGrayBackground("form.html", "address--grey", ".address")
 addActiveLinkTablet()
-addWhiteColorToLink ()
+
 

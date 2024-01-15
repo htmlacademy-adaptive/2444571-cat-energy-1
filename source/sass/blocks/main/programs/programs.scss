@@ -16,6 +16,7 @@
 .programs__item {
   margin:20px 0;
   background-color: $background-grey;
+  position: relative;
 }
 
 .program__title {
@@ -86,6 +87,7 @@
   }
   .program__text {
     @include title-styles($font-secondary, 16px, 400, 24px, 0);
+    max-width:340px;
     margin-top:24px;
     padding:0px;
   }
@@ -104,29 +106,30 @@
     }
   }
   .programs__item {
-    display:flex;
+    display:flex; // сделать через абсолют релатив убрать флексы.
+    flex-direction: column;
     justify-content: space-between;
     padding:77px 63px 57px 52px;
+
   }
-  .program__item-inner {
-    flex-basis:340px;
-  }
+
   .programs__item--slim {
       &::after {
         content:url('../img/index/icons/cat_black_slim_tablet.svg');
         display:inline-block;
-        width:200px;
-        height:200px;
+        position: absolute;
+        right:63px;
+
       }
   }
   .programs__item--fat {
     &::after {
       content:url('../img/index/icons/cat_back_fat_tablet.svg');
       display:inline-block;
-      position: relative;
-      left:-31px;
-      width:200px;
-      height:200px;
+      position: absolute;
+      right:29px;
+      bottom: 98px;
+
     }
   }
 }
@@ -162,6 +165,7 @@
   }
   .program__text {
     padding:39px 61px 27px 52px;
+    max-width:457px;
   }
   .program__link {
     margin:27px 350px 55px 52px;

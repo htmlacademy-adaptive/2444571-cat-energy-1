@@ -3,20 +3,18 @@
   display: flex;
   gap:24px;
 }
-.social-links__url-vk {
-    &::before {
-      content:url('../img/index/icons/vkontakte.svg')
+
+.social-links__link {
+    &:active path {
+      fill:$background-green;
+      opacity:0.3;
     }
 }
 
-.social-links__url-youtube {
-  &::before {
-    content:url('../img/index/icons/youtube.svg')
-  }
-}
-
-.social-links__url-telegram {
-  &::before {
-    content:url('../img/index/icons/telegram.svg')
+@media (min-width: $desktop) {
+  .social-links__img {
+      &:hover > path {
+        fill:$background-green;
+      }
   }
 }

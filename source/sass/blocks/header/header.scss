@@ -1,8 +1,4 @@
 
-.visually-hidden {
-  @include visually-hidden;
-
-}
 .header {
   display:grid;
   grid-template-columns: 2fr 3fr;
@@ -33,7 +29,7 @@
   font-size:20px;
   width:auto;
 }
-.header__menu-item{
+.header__menu-item {
   padding:22px 0 24px 0px;
   border-top:1px solid #E6E6E6;
   background-color: #FFFFFF;
@@ -60,10 +56,10 @@
     background-image: url('../img/index/icons/burger_icon_cross.svg');
     background-repeat:no-repeat;
   }
-  .header__menu-list--closed{
+  .header__menu-list--closed {
     display:none;
   }
-  .header__menu-list--opened{
+  .header__menu-list--opened {
     display:open;
   }
 
@@ -89,7 +85,7 @@
     flex-grow:1;
   }
 
-  .header__menu-item{
+  .header__menu-item {
     border:none;
     &:last-child {
       border-bottom:none;;
