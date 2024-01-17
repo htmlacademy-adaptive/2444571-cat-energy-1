@@ -1,4 +1,20 @@
 .social-links {
   @include list-styles;
   display: flex;
+  gap:24px;
+}
+
+.social-links__link {
+    &:active path {
+      fill:$background-green;
+      opacity:0.3;
+    }
+}
+
+@media (min-width: $desktop) {
+  .social-links__img {
+      &:hover > path {
+        fill:$background-green;
+      }
+  }
 }

@@ -8,45 +8,135 @@
 .header__navigation {
   display:flex;
   justify-content: space-between;
+  align-items:center;
+  gap:65px;
+}
+
+.header__burger-menu {
+  @include button-styles-reset;
+  width:24px;
+  height:24px;
 }
 
 .header__menu-list {
-  @include list-styles
+  @include list-styles;
+
 }
 
 .header__menu-link {
-  @include link-styles-reset
+  @include link-styles-reset;
+  text-transform:uppercase;
+  font-size:20px;
+  width:auto;
+}
+.header__menu-item {
+  padding:22px 0 24px 0px;
+  border-top:1px solid #E6E6E6;
+  background-color: #FFFFFF;
+  text-align:center;
+  &:last-child {
+    border-bottom:1px solid #E6E6E6;
+  }
 }
 
 @media (min-width: $mobile) {
   .header__menu-list {
+    display:block;
+    width:100%;
+    position:absolute;
+    top:66px;
+    left:0;
+  }
+
+  .header__burger-menu--closed {
+    background-image: url('../img/index/icons/burger_icon.svg')
+  }
+
+  .header__burger-menu--opened {
+    background-image: url('../img/index/icons/burger_icon_cross.svg');
+    background-repeat:no-repeat;
+  }
+  .header__menu-list--closed {
     display:none;
   }
+  .header__menu-list--opened {
+    display:open;
+  }
+
+
 }
 
 @media (min-width: $tablet) {
 
   .header {
-    grid-template-columns:1fr 10fr;
-    padding:25px 34px 20px 25px;
+    grid-template-columns:60px 10fr;
+    column-gap:13px;
+    padding:25px 34px 20px 30px;
   }
 
   .header__burger-menu {
     display:none;
   }
   .header__menu-list {
+    position:static;
     display:flex;
     justify-content:flex-end;
     gap:32px;
     flex-grow:1;
-    text-transform: uppercase;
+  }
+
+  .header__menu-item {
+    border:none;
+    &:last-child {
+      border-bottom:none;;
+    }
+  }
+  .header__menu-link {
+    font-size:18px;
+  }
+  .header__menu-link--active {
+    &::after {
+      content:'';
+      display:block;
+      width:100%;
+      height:2px;
+      margin-top:10px;
+      background-color: $background-green ;
+    }
   }
 }
 
 @media (min-width: $desktop) {
   .header {
+    grid-template-columns:70px 10fr;
+    column-gap:14px;
     padding:55px 110px 32px 110px;
   }
+  .header__menu-item {
+    background-color: transparent;
+  }
+  .header__menu-link {
+      &:hover {
+        opacity: 0.6;
+      }
+  }
+  .header__menu-link--down {
+    opacity: 0.3;
+  }
+  .header__menu-link--color-white {
+    color:$color-white;
+  }
+  .header__menu-link--active--white {
+      &::after{
+        content:'';
+        display:block;
+        width:100%;
+        height:2px;
+        margin-top:10px;
+        background-color: $color-white;
+      }
+  }
 }
+
 
 

@@ -15,6 +15,8 @@
 
 .programs__item {
   margin:20px 0;
+  background-color: $background-grey;
+  position: relative;
 }
 
 .program__title {
@@ -25,29 +27,154 @@
 .program__text {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   color:$color-grey;
+  padding:22px 33px 23px 20px;
+}
+
+.program__link {
+  @include link-styles-reset;
+  @include text-styles($font-primary, 16px, 400, 16px, 0);
+  text-transform: uppercase;
+  padding:4px 0;
+  margin:15px 126px 18px 20px;
+  display:inline-block;
+    &::after {
+      content:url('../img/index/icons/icon_arrow.svg');
+      display:inline-block;
+      width:32px;
+      height:10px;
+      margin-left:10px;
+    }
 }
 
 @media (min-width: $mobile) {
-  .program__title::before {
-    content:url('../source/img/index/cat-back.svg');
-    display:block;
-    width:36px;
-    height:50px
+  .program__title--slim {
+      &::before {
+        content:url('../img/index/icons/cat_back_slim.svg');
+        display:inline-block;
+        width:36px;
+        height:50px;
+        margin-right:27px;
+        padding:24px 0 0 20px;
+        vertical-align:bottom;
+      }
+  }
+  .program__title--fat {
+      &::before {
+        content:url('../img/index/icons/cat_back_fat.svg');
+        display:inline-block;
+        width:36px;
+        height:50px;
+        margin-right:43px;
+        padding:24px 0 0 20px;
+        vertical-align:bottom;
+      }
+  }
+  .program__break-hr {
+    border:1px solid #D9D9D9;
+    max-width:85%;
+    margin:0 auto;
+
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $tablet) {
   .programs {
     padding:$section-padding-tablet;
+    padding-bottom: 45px;
+  }
+  .program__break-hr {
+    display:none;
+  }
+  .program__text {
+    @include title-styles($font-secondary, 16px, 400, 24px, 0);
+    max-width:340px;
+    margin-top:24px;
+    padding:0px;
+  }
+
+  .program__link {
+    margin: 52px 126px 0px 0px;
+  }
+  .program__title--slim {
+    &::before {
+      display:none;
+    }
+  }
+  .program__title--fat {
+    &::before {
+      display:none;
+    }
+  }
+  .programs__item {
+    display:flex; // сделать через абсолют релатив убрать флексы.
+    flex-direction: column;
+    justify-content: space-between;
+    padding:77px 63px 57px 52px;
+
+  }
+
+  .programs__item--slim {
+      &::after {
+        content:url('../img/index/icons/cat_black_slim_tablet.svg');
+        display:inline-block;
+        position: absolute;
+        right:63px;
+
+      }
+  }
+  .programs__item--fat {
+    &::after {
+      content:url('../img/index/icons/cat_back_fat_tablet.svg');
+      display:inline-block;
+      position: absolute;
+      right:29px;
+      bottom: 98px;
+
+    }
   }
 }
 
 @media (min-width:$desktop) {
   .programs {
     padding:$section-padding-desktop;
+    padding-bottom:71px;
+    padding-top:162px;
   }
   .programs__list{
     flex-direction:row;
+    gap:80px;
+  }
+  .programs__item {
+    display:block;
+    flex-basis:570px;
+    padding:0px;
+  }
+  .programs__item--slim,
+  .programs__item--fat {
+      &::after {
+        display:none;
+      }
+  }
+  .program__title--slim,
+  .program__title--fat{
+      &::before {
+        display:inline-block;
+        padding:41px 0 0 52px;
+
+      }
+  }
+  .program__text {
+    padding:39px 61px 27px 52px;
+    max-width:457px;
+  }
+  .program__link {
+    margin:27px 350px 55px 52px;
+      &::after {
+        margin-left:25px;
+      }
+      &:active {
+        opacity: 0.3;
+      }
   }
 }
 

@@ -1,7 +1,115 @@
+
+.promo__content {
+background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat.png');
+background-repeat: no-repeat;
+background-position: 50%;
+background-size:cover;
+padding:27px 36px 164px 36px;
+}
+
 .promo__title {
-  font-family: $font-primary;
-  color:$color-white;
-  font-style:normal;
-  font-size: $font-size-title;
+  @include text-styles($font-primary,$font-size-title,400,36px,0);
+  color: $color-white;
   text-align: center;
+}
+
+.promo__text {
+  @include text-styles($font-primary,14px,400,14px,0);
+  color: $color-white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top:27px;
+}
+.promo__image {
+  background-image: url('../img/index/promo_cat_energy.png');
+  background-repeat: no-repeat;
+  background-size:280px 270px;
+  width:280px;
+  height: 270px;
+  margin:-118px auto 0 auto;//TODO насколько законно? или лучше через relative но тогда уезжает кнопка
+}
+
+.promo__link {
+  @include link-styles-reset;
+  display:block;
+  width:192px;
+  max-width:280px;
+  margin:0 auto;
+  padding:10px 44px;
+  background-color: $background-green;
+  text-transform: uppercase;
+  color:$color-white;
+  text-align:center;
+}
+
+@media (min-width:$tablet) {
+
+  .promo__content {
+    background:none;
+    padding:27px 30px 164px 30px;
+  }
+  .promo__title {
+    @include title-styles($font-primary,60px, 400, 60px, 0);
+    color:$color-black;
+    text-align: left;
+    padding-left:90px;
+  }
+  .promo__text {
+    @include title-styles($font-primary,20px, 400, 20px, 0);
+    color:$color-black;
+    text-align: left;
+    padding-left:90px;
+    margin-top:40px;
+  }
+  .promo__image {
+    background-image: url('../img/index/promo_cat_energy_tablet.png');
+    width:709px;
+    height: 609px;
+    background-size:709px 609px;
+    margin-top:-140px;
+  }
+  .promo__link{
+    position: relative;
+    bottom: 586px;
+    left: -142px;
+    padding:14px 26px 14px 26px;
+  }
+}
+
+@media (min-width:$desktop) {
+  .promo {
+    position: relative;
+  }
+  .promo__link {
+    &:hover {
+      background-color:$background-green-hover;
+    }
+    &:active{
+      color: rgba($color-white, 0.3);
+    }
+    bottom: 98px;
+    left: -478px
+  }
+
+  .promo__image {
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat.png');
+    width:720px;
+    height: 694px;
+    background-size:720px 694px;
+    margin:0;
+    position: absolute;
+    top: -171px;
+    right: 0;
+    z-index: -1;
+      &::before {
+        content: url('../img/index/promo_cat_energy_desktop.png');
+        display:inline-block;
+        width:709px;
+        height: 609px;
+        background-size:709px 609px;
+        position: relative;
+        top:128px;
+        right:163px;
+      }
+  }
 }
