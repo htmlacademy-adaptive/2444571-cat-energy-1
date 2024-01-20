@@ -1,4 +1,5 @@
-.address {
+
+.address__inner {
   display: flex;
   padding: 26px 20px;
 }
@@ -19,12 +20,22 @@
 .address__title {
   @include visually-hidden;
 }
-.address--grey {
+.address__inner--grey {
   background-color: $background-grey;
+}
+.address__map iframe {
+  border: none;
+  display: block;
+  width:100%;
+  height:362px;
+
+}
+.address__map  #map .place-card.place-card-large {
+  display:none;
 }
 
 @media (min-width: $tablet) {
-  .address {
+  .address__inner {
     padding:61px 70px;
   }
 
@@ -35,6 +46,22 @@
   .address__contacts {
     max-width:157px;
     text-align: end;
+  }
+  .address__map iframe {
+    height:400px;
+  }
+}
+
+@media (min-width:$desktop) {
+  .address {
+    position: relative;
+  }
+  .address__inner {
+    position: absolute;
+    top:95px;
+    left:110px;
+    background-color: $color-white;
+    padding:61px 78px 60px 80px;
   }
 }
 
