@@ -4,16 +4,17 @@
   gap:24px;
 }
 
-.social-links__link {
-    &:active path {
+.social-links__link svg {
+  fill: #666666;
+    &:active {
       fill:$background-green;
       opacity:0.3;
     }
 }
 
 @media (min-width: $desktop) {
-  .social-links__img {
-      &:hover > path {
+  .social-links__link svg {
+      &:hover {
         fill:$background-green;
       }
   }
