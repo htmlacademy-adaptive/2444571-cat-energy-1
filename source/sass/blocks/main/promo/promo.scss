@@ -5,6 +5,10 @@ background-repeat: no-repeat;
 background-position: 50%;
 background-size:cover;
 padding:27px 36px 164px 36px;
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat_2x.png');
+    background-size:cover;
+  }
 }
 
 .promo__title {
@@ -26,7 +30,10 @@ padding:27px 36px 164px 36px;
   background-size:280px 270px;
   width:280px;
   height: 270px;
-  margin:-118px auto 0 auto;//TODO насколько законно? или лучше через relative но тогда уезжает кнопка
+  margin:-118px auto 0 auto;
+  @media (min-resolution:2dppx) {
+    background-image: url('../img/index/promo_cat_energy_2x.png');
+  }
 }
 
 .promo__link {
@@ -67,6 +74,9 @@ padding:27px 36px 164px 36px;
     height: 609px;
     background-size:709px 609px;
     margin-top:-140px;
+    @media (min-resolution:2dppx) {
+      background-image: url('../img/index/promo_cat_energy_tablet_2x.png');
+    }
   }
   .promo__link{
     position: relative;
@@ -92,7 +102,7 @@ padding:27px 36px 164px 36px;
   }
 
   .promo__image {
-    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat.png');
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat_desktop.png');
     width:720px;
     height: 694px;
     background-size:720px 694px;
@@ -110,6 +120,17 @@ padding:27px 36px 164px 36px;
         position: relative;
         top:128px;
         right:163px;
+        @media (min-resolution: 2dppx) {
+          content: url('../img/index/promo_cat_energy_desktop_2x.png');
+          background-size: 354.5px 304.5px;
+          transform: scale(.5);
+          top:0px;
+          right:340px;
+        }
+      }
+      @media (min-resolution: 2dppx) {
+        background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat_desktop_2x.png');
+        background-size:cover;
       }
   }
 }

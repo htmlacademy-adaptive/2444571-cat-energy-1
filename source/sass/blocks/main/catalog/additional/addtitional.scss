@@ -40,6 +40,10 @@
       width:78px;
       height: 80px;
     }
+    @media (min-resolution:2dppx) {
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_2x.png');
+      background-size:cover;
+    }
 }
 .additional__text {
   @include title-styles($font-secondary, 16px, 400, 20px, 0);
@@ -75,6 +79,11 @@
     flex-direction: row;
     gap:264px;
     height:200px;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_tablet.png');
+    @media (min-resolution:2dppx) {
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_tablet_2x.png');
+      background-size:cover;
+    }
 
   }
   .additional__text{
@@ -114,6 +123,11 @@
     gap:46px;
     flex-basis:245px;
     height:288px;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional.png');
+    @media (min-resolution:2dppx) {
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_2x.png');
+      background-size:cover;
+    }
   }
   .additional__text {
     text-align: center;

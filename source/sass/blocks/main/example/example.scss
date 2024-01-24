@@ -21,7 +21,7 @@
   gap:20px 32px;
   display:grid;
   grid-template-columns: minmax(124px, 1fr) minmax(124px, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 20px;
   margin-top:20px;
   text-align:center;
 }
@@ -36,10 +36,22 @@
 .example__statistic-info {
   @include text-styles($font-secondary, $font-size-small, 400, 12px, 0);
   color:$color-grey;
+  width:77px;
+  margin-top:-19px;
+  background-color: $background-grey;
 }
 
 .example__statistic-count {
   @include text-styles($font-primary, $font-size-title-list, 400, 24px, 0);
+  white-space: nowrap;
+  // padding:14px 42px 31px 42px;
+  display: flex;
+  width: 124px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border:1px solid #CDCDCD;
+  border-radius: 5px;
 }
 
 
@@ -60,6 +72,14 @@
   margin: 0px;
 }
 
+
+.example__image-wrapper {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+
 @media (min-width:$mobile) {
   .example__loss {
     justify-self: end;
@@ -69,7 +89,8 @@
 
   .example {
     background-color:#FFFFFF;
-    padding:$section-padding-tablet;
+    // padding:$section-padding-tablet;
+    padding:0;
     padding-top:45px;
     border-top:1px solid $background-grey;
   }
@@ -80,13 +101,38 @@
     grid-template-rows: 1fr;
     padding-top:55px;
   }
+  .example__title {
+    padding:$section-padding-tablet;
+  }
+  .example__content-inner {
+    padding:$section-padding-tablet;
+  }
   .example__statistic-inner {
     grid-row: span 2;
+  }
+  .example__statistic-count {
+    @include text-styles($font-primary, 30px, 400, 30px, 0);
+    width:162px;
+    height: 77px;
+  }
+  .example__statistic-info {
+    @include text-styles($font-secondary, 14px, 400, 14px, 0);
+    margin-top:-19px;
+    background-color: $color-white;
+    width:112px;
+    white-space: nowrap;
+
   }
   .example__price-inner {
     flex-direction: column;
     align-items:flex-end;
     grid-column: span 1;
+  }
+  .example__image-wrapper {
+    margin-top:99px;
+    background:
+    linear-gradient(to bottom, #ffffff 30%, transparent 30%),
+    linear-gradient(to bottom, #F2F2F2 100%, transparent 100%);
   }
 }
 @media (min-width:$desktop) {
@@ -94,6 +140,15 @@
   .example {
     padding:0px;
     border-top:none;
+  }
+  .example__content-image-wrapper {
+    display:flex;
+    gap:224px;
+    background: $background-grey;
+  }
+  .example__image-wrapper {
+    margin-top: -176px;
+
   }
   .example__title-inner {
     padding:69px 0px 76px 110px;
@@ -104,11 +159,15 @@
   }
   .example__text {
     padding:0px;
+    max-width:436px;
   }
   .example__inner {
     grid-template-columns: 162px 162px;
     grid-template-rows: 1fr;
     margin-top:0px;
+  }
+  .example__statistic-info {
+    background-color: $background-grey;
   }
   .example__price-inner {
     flex-direction: row;
@@ -120,4 +179,3 @@
     grid-column: span 2;
   }
 }
-//TODO как сделать рамки возде 5 КГ? задать тексту цвет фона что бперекрывал бордер рамку через бордер
