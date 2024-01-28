@@ -4,10 +4,23 @@
   justify-content: space-between;
   align-items: center;
   width:280px;
+    &:active {
+      opacity:0.3;
+    }
+    &:active svg {
+      fill:$background-green;
+    }
 }
 .academy__text {
   @include text-styles($font-secondary,16px, 400, 20px, 0);
   color:$color-grey;
+}
+
+.academy__logo {
+  fill: #666666;
+    &:active {
+      fill:$background-green;
+    }
 }
 
 @media (min-width:$tablet) {
@@ -17,4 +30,11 @@
 
   }
 
+}
+@media (min-width:$desktop) {
+  .academy__logo {
+    &:hover {
+      fill:$background-green;
+    }
+}
 }

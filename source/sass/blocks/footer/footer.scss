@@ -34,17 +34,12 @@
     justify-content: space-between;
     padding:73px 110px;
   }
-  // .footer__link-title{
-  //   &:hover::before {
-  //     filter: grayscale(80%); //TODO как сделать ховер для свг??
-  //     fill:red;
-  //   }
-  // }
-  .footer__link-title  {
-      &:hover svg path {
+
+  .footer__icon-title {
+      &:hover {
         fill:#3E3E3E;
       }
-      &:active svg path {
+      &:active {
         fill:#6B6B6B;
       }
   }
