@@ -89,6 +89,9 @@
   .program__break-hr {
     display:none;
   }
+  .program__title {
+    @include title-styles($font-primary, 36px, 400, 36px, 0);
+  }
   .program__text {
     @include title-styles($font-secondary, 16px, 400, 24px, 0);
     max-width:340px;
@@ -155,6 +158,7 @@
     display:block;
     flex-basis:570px;
     padding:0px;
+    padding-top:77px;
   }
   .programs__item--slim,
   .programs__item--fat {
@@ -162,14 +166,36 @@
         display:none;
       }
   }
-  .program__title--slim,
-  .program__title--fat{
-      &::before {
-        display:inline-block;
-        padding:41px 0 0 52px;
+  .program__title {
+    text-align: center;
+    position: relative;
+  }
 
+  .program__title--slim {
+      &::before {
+        content:url('../img/index/icons/cat_black_slim_desktop.svg');
+        display:inline-block;
+        width:100px;
+        height:106px;
+        position: absolute;
+        bottom: -29px;
+        left: 32px;
+        vertical-align:middle;
       }
   }
+  .program__title--fat {
+    left:44px;
+      &::before {
+        content:url('../img/index/icons/cat_back_fat_desktop.svg');
+        display:inline-block;
+        width:134px;
+        height:100px;
+        position: absolute;
+        bottom: -29px;
+        left: -26px;;
+        vertical-align:middle;
+      }
+    }
   .program__text {
     padding:39px 61px 27px 52px;
     max-width:457px;
@@ -190,4 +216,6 @@
     transition: transform 0.3s;
   }
 }
+
+
 
