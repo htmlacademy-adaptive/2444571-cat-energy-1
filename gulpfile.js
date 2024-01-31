@@ -11,7 +11,7 @@ import terser from "gulp-terser";
 import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 import squoash from "gulp-libsquoosh"
-// import del from "del";
+import {deleteAsync} from 'del';
 
 
 
@@ -69,10 +69,39 @@ export const createWebp = () => {
 // SVG
 
 export const svg = () => {
-  return gulp.src('source/img/**/*.svg','!source/img/**/icons/*.svg' )
-  .pipe(gulp.svgo())
+  return gulp.src('source/img/**/*.svg','!source/img/icons/*.svg' )
+  .pipe(svgo())
   .pipe(gulp.dest('build/img'))
 }
+
+//Sprite
+export const sprits = () => {
+  return gulp.src('source/img/icons/*.svg' )
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg:true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'))
+
+}
+
+// Clone
+export const copy = (done) => {
+  gulp.src([
+    'source/fonts/**/*.{woff2,woff}',
+    'source/*.ico'
+  ], {
+    base: 'source'
+  })
+  .pipe(gulp.dest('build'))
+  done()
+}
+
+// Clean
+  export const clean = () => {
+    return deleteAsync('build')
+  }
 
 // Server
 
@@ -94,8 +123,25 @@ const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
+export const build = gulp.series(
+  clean,
+  copy,
+  images,
+  gulp.parallel(
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
+  ),
+  );
+
 
 
 export default gulp.series(
-  html,styles, script, images, createWebp, server, watcher
+  clean,copy, images,
+  gulp.parallel(
+    html,styles, script,  createWebp, svg, sprits, server, watcher
+  )
 );
