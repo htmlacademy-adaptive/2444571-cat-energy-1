@@ -46,13 +46,13 @@ export const script = () => {
 
 // Images
 export const images = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png,webp}')
   .pipe(squoash())
   .pipe(gulp.dest('build/img'))
 }
 
 export const copyImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png,webp}')
   .pipe(gulp.dest('build/img'))
 }
 
@@ -90,7 +90,8 @@ export const sprits = () => {
 export const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
-    'source/*.ico'
+    'source/*.ico',
+    'source/img',
   ], {
     base: 'source'
   })
@@ -130,9 +131,9 @@ export const build = gulp.series(
   gulp.parallel(
   styles,
   html,
-  scripts,
+  script,
   svg,
-  sprite,
+  sprits,
   createWebp
   ),
   );
