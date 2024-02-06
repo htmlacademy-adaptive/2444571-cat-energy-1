@@ -60,12 +60,14 @@
   .header__burger-menu--opened {
     background-image: url('../img/index/icons/burger_icon_cross.svg');
     background-repeat:no-repeat;
+
   }
   .header__menu-list--closed {
     display:none;
   }
   .header__menu-list--opened {
     display:block;
+    z-index:1;
   }
 
 

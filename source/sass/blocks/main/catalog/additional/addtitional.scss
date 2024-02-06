@@ -28,7 +28,7 @@
   justify-content: center;
   height:290px;
   margin-top:35px;
-  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional.png');
+  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional.webp');
   background-repeat: no-repeat;
   background-position: 50%;
   background-size:cover;
@@ -41,7 +41,7 @@
       height: 80px;
     }
     @media (min-resolution:2dppx) {
-      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_2x.png');
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_2x.webp');
       background-size:cover;
     }
 }
@@ -79,9 +79,9 @@
     flex-direction: row;
     gap:264px;
     height:200px;
-    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_tablet.png');
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_tablet.webp');
     @media (min-resolution:2dppx) {
-      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_tablet_2x.png');
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_tablet_2x.webp');
       background-size:cover;
     }
 
@@ -123,9 +123,9 @@
     gap:46px;
     flex-basis:245px;
     height:288px;
-    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional.png');
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional.webp');
     @media (min-resolution:2dppx) {
-      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_2x.png');
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/catalog/cat_additional_2x.webp');
       background-size:cover;
     }
   }
