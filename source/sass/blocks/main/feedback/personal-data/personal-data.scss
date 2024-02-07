@@ -17,11 +17,11 @@
     &::after {
       content:"";
       display:inline-block;
-      width:93px;
+      width:100vw;
       height:2px;
       background-color:$background-green;
       position: absolute;
-      right: 0px;
+      left:225px;
     }
 }
 
@@ -113,7 +113,7 @@
     max-width:100%;
     margin-bottom:76px;
     &::after {
-      width:146px;
+      left:625px;
     }
     &::before {
       content:"";
@@ -144,8 +144,7 @@
   .personal-data__title {
     position: relative;
     &::after {
-      width:778px;
-      right:-111px;
+      left:555px;
     }
     &::before {
       width:70px;

@@ -3,7 +3,7 @@ body {
   color:$color-black;
   margin: 0 auto;
   box-sizing: border-box;
-  max-width:$desktop;
+  // max-width:$desktop;
 }
 .visually-hidden {
   @include visually-hidden;

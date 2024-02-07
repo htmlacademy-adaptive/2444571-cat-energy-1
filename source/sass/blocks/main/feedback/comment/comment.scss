@@ -6,11 +6,11 @@
   &::after {
     content:"";
     display:inline-block;
-    width:159px;
     height:2px;
     background-color:$background-green;
     position: absolute;
-    right: 0px;
+    width:100vw;
+    left:168px;
   }
 }
 
@@ -46,7 +46,7 @@
     @include text-styles($font-primary, 36px, 400, 36px, 0);
     margin-bottom:87px;
     &::after {
-      width:476px;
+      left:290px;
     }
     &::before {
       content:"";
@@ -75,8 +75,8 @@
     margin-bottom:78px;
     position: relative;
     &::after {
-      width:1108px;
-      right: -111px;
+      left:220px;
+
     }
     &::before {
       width:70px;

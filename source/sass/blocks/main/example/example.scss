@@ -140,6 +140,16 @@
   .example {
     padding:0px;
     border-top:none;
+    background:
+    linear-gradient(to bottom, #ffffff 33%, transparent 30%),
+    linear-gradient(to bottom, #F2F2F2 100%, transparent 100%);
+  }
+  .example__container {
+    max-width:1440px;
+    margin: 0 auto;
+    width:100%;
+
+
   }
   .example__content-image-wrapper {
     display:flex;
@@ -152,6 +162,11 @@
   }
   .example__title-inner {
     padding:69px 0px 76px 110px;
+  }
+
+  .example__title {
+    @include title-styles($font-primary, 60px, 400, 60px, 0);
+    padding:0px;
   }
   .example__content-inner {
     padding:70px 0px 75px 110px;

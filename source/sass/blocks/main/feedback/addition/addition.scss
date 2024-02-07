@@ -12,11 +12,11 @@
   &::after {
     content:"";
     display:inline-block;
-    width:139px;
+    width:100vw;
     height:2px;
     background-color:$background-green;
     position: absolute;
-    right: 0px;
+    left:186px
   }
 }
 
@@ -63,7 +63,7 @@
   .addition__title {
     @include title-styles($font-primary, 36px, 400, 36px, 0);
     &::after {
-      width:446px;
+      left:322px;
     }
     &::before {
       content:"";
@@ -94,8 +94,7 @@
   .addition__title {
     position: relative;
     &::after {
-      width:1078px;
-      right:-111px;
+      left:258px;
     }
     &::before {
       width:70px;

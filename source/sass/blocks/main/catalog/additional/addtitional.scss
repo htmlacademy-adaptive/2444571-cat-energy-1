@@ -12,11 +12,11 @@
     &::after {
       content:"";
       display:inline-block;
-      width:54px;
+      width:100vw;
       height:2px;
       background-color:$background-green;
       position: absolute;
-      right: -21px;
+      left:242px;
     }
 }
 
@@ -62,8 +62,7 @@
     margin-left:40px;
     padding-bottom:80px;
     &::after {
-      width:320px;
-      right:-31px;
+      left: 380px;
     }
     &::before {
       content:"";
@@ -103,10 +102,6 @@
     @include title-styles($font-primary, 36px, 400, 36px, 0);
     margin-left:0px;
     padding-bottom:80px;
-    &::after {
-      width:952px;
-      right:-104px;
-    }
     &::before {
       content:"";
       display:inline-block;

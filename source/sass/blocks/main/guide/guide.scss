@@ -141,7 +141,14 @@
   .guide {
     padding:$section-padding-desktop;
     padding-bottom:70px;
+    max-width:1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
 
+  }
+
+  .guide__title {
+    @include title-styles($font-primary, 60px, 400, 60px, 0);
   }
 
   .guide__list {
