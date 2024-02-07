@@ -92,6 +92,9 @@
 
 @media (min-width:$desktop) {
   .additional {
+    max-width:1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
     padding:76px 110px;
   }
   .additional-inner {

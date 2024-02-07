@@ -23,6 +23,7 @@
     padding:0 30px;
   }
   .catalog__title {
+    @include title-styles($font-primary, 60px, 400, 60px, 0);
     border-top: none;
   }
 
@@ -36,7 +37,9 @@
   .catalog {
     max-width:$desktop;
     padding:0 110px;
+    box-sizing: border-box;
   }
+
   .catalog__product-list {
     grid-template-columns: repeat(4, 245px);
     grid-template-rows: repeat(2, 511px);

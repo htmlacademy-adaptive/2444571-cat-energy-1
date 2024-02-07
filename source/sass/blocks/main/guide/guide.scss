@@ -72,36 +72,12 @@
     grid-template: 230px 230px/280px 280px;
     gap:37px 153px;
     align-items:flex-start;
+    padding-top:72px;
   }
 
   .guide-list__item {
     position: relative;
   }
-  // .guide-list__item--counter-one {
-  //     &::after {
-
-  //     }
-  // }
-  // .guide-list__item--counter-two {
-  //   &::after {
-  //     content:"2";
-  //     left:100px;
-  //   }
-  // }
-
-  // .guide-list__item--counter-three {
-  //   &::after {
-  //     content:"3";
-  //     left:120px;
-  //   }
-  // }
-
-  // .guide-list__item--counter-four {
-  //   &::after {
-  //     content:"4";
-  //     left:100px;
-  //   }
-  // }
   .guide-list__item {
       &::after {
         @include title-styles($font-primary,280px, 400, 280px,0);
@@ -155,6 +131,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:1fr;
     gap:95px;
+
   }
 }
 
