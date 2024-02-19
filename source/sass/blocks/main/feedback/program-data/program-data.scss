@@ -5,7 +5,6 @@
   gap:13px;
   position:relative;
   padding: 22px 0 20px 0px;
-
     &::before {
       content:'';
       display:block;
@@ -27,11 +26,9 @@
       left: -21px;
     }
 }
-
 .program-data__input {
   display:none;
     &:checked + .program-data__label::after {
-      // content: url('../img/form/radio/radiobutton_checked.svg');
       content:'';
       width: 14px;
       height: 14px;
@@ -39,14 +36,13 @@
       background-color: #68B738;
       position:absolute;
       left: 9px;
-      top: 5px; //TODO мб есть лучше варианты как позиционировать, кроме как подгонять по пикселям?
+      top: 5px;
     }
     &:disabled + .program-data__label {
       opacity: 0.3;
       cursor: not-allowed;
     }
 }
-
 .program-data__label {
   @include text-styles($font-primary, 16px, 400, 18px, 0);
   text-transform: uppercase;
@@ -55,7 +51,6 @@
   padding-left: 45px;
   cursor: pointer;
     &::before {
-      // content: url('../img/form/radio/radiobutton_clear.svg');
       content: '';
       position: absolute;
       left: 0;
@@ -79,14 +74,12 @@
     border:1px solid #E7E7E7;
     padding:23px 0px 27px 23px;
     height: 144px;
-    justify-content: space-around; //TODO сомнительно, не понимаю как норм сделать высоту.
+    justify-content: space-around;
   }
-
   .program-data__label {
     @include text-styles($font-primary, 20px, 400, normal, 0);
     padding-left:50px;
     &::before {
-      // content: url('../img/form/radio/radiobutton_clear.svg'); //TODO как лучше рисовать самому или вставлять свг?
       content: '';
       width: 40px;
       height: 40px;
@@ -94,7 +87,6 @@
       border:1px solid #CDCDCD;
     }
   }
-
   .program-data__input {
     display:none;
       &:checked + .program-data__label::after {
@@ -108,6 +100,7 @@
       }
   }
 }
+
 @media (min-width:$desktop) {
   .program-data {
     flex-basis:50%;
@@ -115,7 +108,7 @@
   }
   .program-data__label {
       &::before {
-        transform: translateY(-37%); //TODO не понимаю как подругоу отцентрвоать радиобаттон и текст лейбла
+        transform: translateY(-37%);
       }
       &:hover::before {
         border-color:#BABABA;

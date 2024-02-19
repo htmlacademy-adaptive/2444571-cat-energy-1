@@ -19,7 +19,6 @@
     left:186px
   }
 }
-
 .addition__checkbox {
   display:none;
   &:checked + .addition__label::after {
@@ -49,7 +48,6 @@
       width:30px;
       height: 30px;
     }
-
 }
 
 @media (min-width:$tablet) {
@@ -97,8 +95,8 @@
       left:258px;
     }
     &::before {
-      width:70px;
-      left:-111px;
+      width: 100vw;
+      left: calc(-1 * 100vw - 40px);
     }
   }
   .addition__inner {

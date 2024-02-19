@@ -4,18 +4,15 @@
   display: flex;
   flex-direction: column;
 }
-
 .example__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
 }
-
 .example__text {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   padding-top:40px;
   margin:0;
   color:$color-grey;
 }
-
 .example__inner {
   align-self:center;
   gap:20px 32px;
@@ -32,7 +29,6 @@
   align-items: center;
   gap:8px;
 }
-
 .example__statistic-info {
   @include text-styles($font-secondary, $font-size-small, 400, 12px, 0);
   color:$color-grey;
@@ -44,17 +40,14 @@
 .example__statistic-count {
   @include text-styles($font-primary, $font-size-title-list, 400, 24px, 0);
   white-space: nowrap;
-  // padding:14px 42px 31px 42px;
   display: flex;
   width: 124px;
-  height: 56px;
+  min-height: 56px;
   align-items: center;
   justify-content: center;
   border:1px solid #CDCDCD;
   border-radius: 5px;
 }
-
-
 .example__price-inner {
   display:flex;
   justify-content: center;
@@ -63,16 +56,12 @@
   text-transform: uppercase;
   height: fit-content;
 }
-
 .example__loss {
   margin:0px
 }
-
 .example__price {
   margin: 0px;
 }
-
-
 .example__image-wrapper {
   display:flex;
   justify-content: center;
@@ -86,10 +75,8 @@
   }
 }
 @media (min-width:$tablet) {
-
   .example {
     background-color:#FFFFFF;
-    // padding:$section-padding-tablet;
     padding:0;
     padding-top:45px;
     border-top:1px solid $background-grey;
@@ -121,7 +108,6 @@
     background-color: $color-white;
     width:112px;
     white-space: nowrap;
-
   }
   .example__price-inner {
     flex-direction: column;
@@ -135,6 +121,19 @@
     linear-gradient(to bottom, #F2F2F2 100%, transparent 100%);
   }
 }
+
+@media(min-width:$tablet) {
+  .example__price-inner {
+    gap:9px;
+  }
+  .example__loss {
+    @include text-styles($font-primary, 20px, 400, 20px, 0);
+  }
+  .example__price {
+    @include text-styles($font-primary, 20px, 400, 20px, 0);
+  }
+}
+
 @media (min-width:$desktop) {
 
   .example {
@@ -148,8 +147,6 @@
     max-width:1440px;
     margin: 0 auto;
     width:100%;
-
-
   }
   .example__content-image-wrapper {
     display:flex;
@@ -158,12 +155,10 @@
   }
   .example__image-wrapper {
     margin-top: -176px;
-
   }
   .example__title-inner {
     padding:69px 0px 76px 110px;
   }
-
   .example__title {
     @include title-styles($font-primary, 60px, 400, 60px, 0);
     padding:0px;

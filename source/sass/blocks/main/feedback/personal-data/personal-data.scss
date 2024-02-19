@@ -5,7 +5,6 @@
   gap:14px;
   padding-bottom:24px;
 }
-
 .personal-data__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0);
   display:flex;
@@ -24,21 +23,23 @@
       left:225px;
     }
 }
-
 .personal-data__inner {
   display:flex;
   flex-direction: column;
   gap:14px;
 }
+.personal-data__input-icon {
+  stroke: #000000;
+}
 .personal-data__input {
   flex-grow:1;
   height:45px;
   border:1px solid #E7E7E7;
+  padding:0px 0px 0px 15px;
     &::placeholder {
       @include text-styles($font-primary, 16px, 400, 18px, 0);
       text-transform: uppercase;
       color:$color-grey;
-      padding:14px 164px 13px 15px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -50,60 +51,56 @@
       padding-left:15px;
     }
     &:focus {
-      outline: none;
-      border:2px solid $color-grey;
+      outline: 2px solid $color-grey;
     }
     &:invalid:not(:placeholder-shown) {
-      border:2px solid #FF8282;
+      outline:2px solid #FF8282;
+    }
+    &:invalid:not(:placeholder-shown) + .personal-data__input-icon {
+      stroke:#FF8282;
+    }
+    &:valid + .personal-data__input-icon {
+      stroke:#68B738;
     }
 }
-
 .personal-data__label {
   @include text-styles($font-primary, 16px, 400, 18px, 0);
   text-transform: uppercase;
   color:$color-grey;
 }
-.personal__data__email-inner,
+.personal-data__email-inner,
 .personal-data__phone-inner {
   display:flex;
   gap:13px;
   align-items: center;
   position: relative;
 }
-.personal-data__label--icon-email {
-    &::after {
-      content:url('../img/form/text/email_icon_input.svg');
-      display:inline-block;
-      width:20px;
-      height: 20px;
-      position:absolute;
-      right: 12px;
-    }
+.personal-data__input-icon {
+  position: absolute;
+  top:15px;
+  right: 6px;
+  bottom:12px;
+  fill:none;
 }
-
-.personal-data__label--icon-phone {
-  &::after {
-    content:url('../img/form/text/phone_icon_input.svg');
-    display:inline-block;
-    width:20px;
-    height: 20px;
-    position:absolute;
-    right: 12px;
-  }
-}
-
-
 @media (min-width:$tablet) {
   .personal-data {
     padding-bottom:65px;
   }
   .personal-data__input {
+    padding:3px 15px;
       &::placeholder {
         @include text-styles($font-primary, 20px, 400, normal, 0);
       }
       &:not(:placeholder-shown) {
         @include text-styles($font-primary, 20px, 400, normal, 0);
       }
+  }
+  .personal-data__input-icon {
+    position: absolute;
+    top:18px;
+    right: 6px;
+    bottom:12px;
+    fill:none;
   }
   .personal-data__label {
     @include text-styles($font-primary, 20px, 400, normal, 0);
@@ -125,7 +122,6 @@
       left: 0px;
     }
   }
-
 }
 
 @media (min-width:$desktop) {
@@ -137,7 +133,7 @@
     flex-direction: row;
     gap:80px;
   }
-  .personal__data__email-inner,
+  .personal-data__email-inner,
   .personal-data__phone-inner {
     flex-basis: 50%;
   }
@@ -147,8 +143,8 @@
       left:555px;
     }
     &::before {
-      width:70px;
-      left:-112px;
+      width: 100vw;
+      left: calc(-1 * 100vw - 40px);
     }
   }
 }

@@ -1,3 +1,6 @@
+.comment {
+  padding-bottom:38px;
+}
 .comment__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0);
   margin-bottom: 38px;
@@ -13,23 +16,20 @@
     left:168px;
   }
 }
-
 .comment__label {
   @include visually-hidden;
 }
-
 .comment__textarea {
   width:100%;
   outline:none;
   border:1px solid #E7E7E7;
-  margin-bottom:23px;
   height: 150px;
   box-sizing: border-box;
+  padding:14px 15px 0px 15px;
     &::placeholder {
       @include text-styles($font-primary, 16px, 400, 18px, 0);
       text-transform: uppercase;
       color:$color-grey;
-      padding:14px 15px 0px 15px;
       white-space: nowrap;
     }
     &:not(:placeholder-shown) {
@@ -42,6 +42,9 @@
 }
 
 @media (min-width: $tablet) {
+  .comment {
+    padding-bottom:65px;
+  }
   .comment__title {
     @include text-styles($font-primary, 36px, 400, 36px, 0);
     margin-bottom:87px;
@@ -59,7 +62,6 @@
     }
   }
   .comment__textarea {
-    margin-bottom: 65px;
     height: 175px;
     &::placeholder {
       @include text-styles($font-primary, 20px, 400, 30px, 0);
@@ -71,19 +73,18 @@
 }
 
 @media (min-width:$desktop) {
+  .comment {
+    padding-bottom:70px;
+  }
   .comment__title {
     margin-bottom:78px;
     position: relative;
     &::after {
       left:220px;
-
     }
     &::before {
-      width:70px;
-      left:-110px;
+      width: 100vw;
+      left: calc(-1 * 100vw - 40px);
     }
-  }
-  .comment__textarea {
-    margin-bottom: 70px;
   }
 }

@@ -1,14 +1,10 @@
 .feedback {
   padding:27px 20px 0px 20px;
-  // max-width:$mobile;
-  // margin:0 auto;
 }
-
 .feedback__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
   margin-bottom:37px;
 }
-
 .feedback__text {
   @include title-styles($font-primary, 14px, 400, 18px, 0);
   margin-bottom:39px;
@@ -33,25 +29,11 @@
 }
 .feedback__rules {
   @include title-styles($font-secondary, 14px, 400, 16px, 0);
-}
-
-
-@media (min-width:$desktop) {
-
-
-
-}
-
-@media (min-width:$mobile) {
-  .feedback__rules {
-    display:block;
-  }
+  display:block;
 }
 
 @media (min-width:$tablet) {
   .feedback {
-    // max-width:$tablet;
-    // margin:0 auto;
     padding:27px 70px 0 70px;
   }
   .feedback__title {
@@ -69,7 +51,6 @@
   .feedback__inner{
     padding-bottom: 65px;
   }
-
   .feedback__button-inner {
     flex-direction: row;
     gap:60px;
@@ -80,7 +61,6 @@
     max-width:284px;
     padding:14px 45px;
   }
-
 }
 
 @media (min-width:$desktop) {
@@ -99,7 +79,6 @@
     justify-content: space-between;
     padding-bottom: 24px;
   }
-
   .feedback__button {
     max-width:570px;
     &:hover {

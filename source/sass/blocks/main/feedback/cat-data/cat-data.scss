@@ -4,7 +4,6 @@
   gap:14px;
   padding-bottom:24px;
 }
-
 .cat-data__label {
   text-transform: uppercase;
   color:$color-grey;
@@ -12,12 +11,12 @@
 .cat-data__input {
   flex-grow:1;
   height:45px;
+  padding:0px 0px 0px 15px;
   border:1px solid #E7E7E7;
     &::placeholder {
       @include text-styles($font-primary, 16px, 400, 18px, 0);
       text-transform: uppercase;
       color:$color-grey;
-      padding:14px 164px 13px 15px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%)
@@ -29,12 +28,17 @@
       padding-left:15px;
     }
     &:focus {
-      outline: none;
-      border:2px solid $color-grey;
+      outline: 2px solid $color-grey;
     }
     &:invalid:not(:placeholder-shown) {
       border:2px solid #FF8282;
     }
+    &::-webkit-outer-spin-button
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    -moz-appearance: textfield;
 }
 .cat-data__name-inner,
 .cat-data__weight-inner,
@@ -46,6 +50,9 @@
 }
 
 @media (min-width: $tablet) {
+  .cat-data__input {
+    padding:3px 15px;
+  }
   .cat-data__label {
     @include text-styles($font-primary, 20px, 400, normal, 0);
   }

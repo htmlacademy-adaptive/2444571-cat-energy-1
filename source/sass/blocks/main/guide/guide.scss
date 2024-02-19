@@ -1,14 +1,10 @@
 .guide {
-
   padding:$section-padding;
   padding-bottom:49px;
-
 }
-
 .guide__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
 }
-
 .guide__list {
   @include list-styles;
   padding-top:40px;
@@ -16,42 +12,39 @@
   grid-template-columns: 1fr;
   gap:26px;
 }
-.guide-list__item {
+.guide__list-item {
   display: flex;
   align-items: center;
 }
-
-.guide-list__content {
+.guide__list-content {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   color:$color-grey;
   display:flex;
   gap:20px;
   align-items:center;
-
 }
-.guide-list__content--tree {
+.guide__list-content--tree {
   &::before {
     content:url('../img/index/icons/list_img_1.svg');
     width:60px;
     height:60px;
   }
 }
-.guide-list__content--water {
+.guide__list-content--water {
   &::before {
     content:url('../img/index/icons/list_img_2.svg');
     width:60px;
     height:60px;
   }
 }
-.guide-list__content--fork {
+.guide__list-content--fork {
   &::before {
     content:url('../img/index/icons/list_img_3.svg');
     width:60px;
     height:60px;
   }
 }
-
-.guide-list__content--gram {
+.guide__list-content--gram {
   &::before {
     content:url('../img/index/icons/list_img_4.svg');
     width:60px;
@@ -59,26 +52,21 @@
   }
 }
 
-
 @media (min-width:$tablet) {
-
   .guide {
     padding:$section-padding-tablet;
     padding-bottom: 47px;
-
   }
-
   .guide__list {
     grid-template: 230px 230px/280px 280px;
     gap:37px 153px;
     align-items:flex-start;
     padding-top:72px;
   }
-
-  .guide-list__item {
+  .guide__list-item {
     position: relative;
   }
-  .guide-list__item {
+  .guide__list-item {
       &::after {
         @include title-styles($font-primary,280px, 400, 280px,0);
         color:$background-grey;
@@ -103,8 +91,7 @@
         left:120px;
       }
   }
-
-  .guide-list__content {
+  .guide__list-content {
     flex-direction: column;
     font-size:16px;
     line-height: 24px;
@@ -112,26 +99,22 @@
     max-width:204px;
   }
 }
-@media (min-width:$desktop) {
 
+@media (min-width:$desktop) {
   .guide {
     padding:$section-padding-desktop;
     padding-bottom:70px;
     max-width:1440px;
     margin: 0 auto;
     box-sizing: border-box;
-
   }
-
   .guide__title {
     @include title-styles($font-primary, 60px, 400, 60px, 0);
   }
-
   .guide__list {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:1fr;
     gap:95px;
-
   }
 }
 
