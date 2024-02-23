@@ -29,6 +29,9 @@
   text-transform:uppercase;
   font-size:20px;
   width:auto;
+    &:active {
+      opacity: 0.3;
+    }
 }
 .header__menu-item {
   padding:22px 0 24px 0px;
@@ -126,9 +129,6 @@
       &:hover {
         opacity: 0.6;
       }
-  }
-  .header__menu-link--down {
-    opacity: 0.3;
   }
   .header__menu-link--color-white {
     color:$color-white;

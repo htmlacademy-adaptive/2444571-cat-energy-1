@@ -33,9 +33,6 @@ function addActiveLinkTablet () {
   const allElementsExceptLastPart = headerMenuList.querySelectorAll(`a:not([href="#"])`)
   if (screenWidth >= 768) {
     element?.classList.add('header__menu-link--active');
-    allElementsExceptLastPart.forEach((aTag) => {
-      aTag.classList.add('header__menu-link--down')
-    })
   }
 }
 
