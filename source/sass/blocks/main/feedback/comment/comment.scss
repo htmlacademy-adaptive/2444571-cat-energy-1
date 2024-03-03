@@ -43,13 +43,14 @@
 
 @media (min-width: $tablet) {
   .comment {
-    padding-bottom:65px;
+    padding-bottom:82px;
   }
   .comment__title {
     @include text-styles($font-primary, 36px, 400, 36px, 0);
     margin-bottom:87px;
     &::after {
       left:290px;
+      top:1232px;
     }
     &::before {
       content:"";
@@ -59,10 +60,12 @@
       background-color:$background-green;
       position: absolute;
       left: 0px;
+      top:1232px;
     }
   }
   .comment__textarea {
     height: 175px;
+    padding:11px 20px 0;
     &::placeholder {
       @include text-styles($font-primary, 20px, 400, 30px, 0);
     }
@@ -74,17 +77,22 @@
 
 @media (min-width:$desktop) {
   .comment {
-    padding-bottom:70px;
+    padding-bottom:84px;
   }
   .comment__title {
     margin-bottom:78px;
     position: relative;
     &::after {
       left:220px;
+      top:18px;
     }
     &::before {
       width: 100vw;
       left: calc(-1 * 100vw - 40px);
+      top:18px;
     }
+  }
+  .comment__textarea {
+    padding:6px 20px 0;
   }
 }

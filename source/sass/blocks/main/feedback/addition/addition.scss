@@ -1,4 +1,6 @@
-
+.addition {
+  margin-top:-21px;
+}
 .addition__inner {
   display:grid;
   grid-template-columns: 174px;
@@ -43,8 +45,9 @@
   gap:15px;
   position: relative;
     &::before {
-      content: url('../img/form/checkbox/checkbox_clear.svg');
+      content: '';
       display:inline-block;
+      border:1px solid #CDCDCD;
       width:30px;
       height: 30px;
     }
@@ -55,13 +58,14 @@
     grid-template-columns: repeat(2,224px);
     grid-template-rows: repeat(2,1fr);
     padding:57px 0 52px 0;
-    column-gap:132px;
-    row-gap: 23px;
+    column-gap:119px;
+    row-gap: 29px;
   }
   .addition__title {
     @include title-styles($font-primary, 36px, 400, 36px, 0);
     &::after {
       left:322px;
+      top:1595px;
     }
     &::before {
       content:"";
@@ -71,11 +75,13 @@
       background-color:$background-green;
       position: absolute;
       left: 0px;
+      top:1595px;
     }
   }
   .addition__label {
     @include title-styles($font-primary, 20px, 400, normal, 0);
     gap:20px;
+    white-space: nowrap;
     &::before {
       width:40px;
       height: 40px;
@@ -83,7 +89,10 @@
   }
   .addition__checkbox {
     &:checked + .addition__label::after {
-      top:2px;
+      content: url('../img/form/checkbox/checkbox_tick_tablet.svg');
+      display:inline-block;
+      top:6px;
+      left:8px;
     }
   }
 }
@@ -93,19 +102,24 @@
     position: relative;
     &::after {
       left:258px;
+      top:21px;
     }
     &::before {
       width: 100vw;
       left: calc(-1 * 100vw - 40px);
+      top:21px;
     }
   }
   .addition__inner {
     grid-template-columns: repeat(4,189px);
     grid-template-rows: 1fr;
-    column-gap:104px;
+    column-gap:136px;
   }
   .addition__label {
     display: flex;
     align-items: unset;
+      &:before {
+        flex-shrink:0;
+      }
   }
 }

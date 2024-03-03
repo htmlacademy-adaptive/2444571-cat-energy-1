@@ -1,7 +1,7 @@
 
 .address__inner {
   display: flex;
-  padding: 26px 20px;
+  padding: 19px 20px;
 }
 .address__text {
   @include text-styles($font-primary,16px, 400, 20px, 0);
@@ -31,12 +31,19 @@
 }
 @media (min-width: $tablet) {
   .address__inner {
-    padding:61px 70px;
+    padding:60px 70px 60px 70px;
+    justify-content: space-between;
   }
   .address__text {
+    @include text-styles($font-primary,20px, 400, 26px, 0);
     max-width:163px;
   }
+  .address__city {
+    position: relative;
+    top:20px;
+  }
   .address__contacts {
+    @include text-styles($font-secondary,16px, 400, 20px, 0);
     max-width:157px;
     text-align: end;
   }
@@ -50,11 +57,19 @@
     position: relative;
   }
   .address__inner {
+    width:408px;
     position: absolute;
     top:95px;
     left:110px;
     background-color: $color-white;
     padding:61px 78px 60px 80px;
+  }
+  .address__contacts {
+    text-align: left;
+  }
+  .address__city {
+    display: inline-block;
+    padding-top:17px;
   }
 }
 

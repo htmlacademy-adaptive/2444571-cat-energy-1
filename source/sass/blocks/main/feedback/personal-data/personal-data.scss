@@ -11,8 +11,7 @@
   align-items: center;
   max-width:187px;
   justify-content: space-between;
-  margin-top: 26px;
-  margin-bottom:35px;
+  margin: 29px 0 18px;
     &::after {
       content:"";
       display:inline-block;
@@ -20,7 +19,8 @@
       height:2px;
       background-color:$background-green;
       position: absolute;
-      left:225px;
+      left: 227px;
+      top: 627px;
     }
 }
 .personal-data__inner {
@@ -86,8 +86,11 @@
   .personal-data {
     padding-bottom:65px;
   }
+  .personal-data__inner {
+    gap:18px;
+  }
   .personal-data__input {
-    padding:3px 15px;
+    padding:3px 20px;
       &::placeholder {
         @include text-styles($font-primary, 20px, 400, normal, 0);
       }
@@ -108,9 +111,10 @@
   .personal-data__title {
     @include text-styles($font-primary, 36px, 400, 36px, 0);
     max-width:100%;
-    margin-bottom:76px;
+    margin-bottom:60px;
     &::after {
-      left:625px;
+      left:622px;
+      top:931px;
     }
     &::before {
       content:"";
@@ -120,6 +124,7 @@
       background-color:$background-green;
       position: absolute;
       left: 0px;
+      top: 931px;
     }
   }
 }
@@ -141,10 +146,12 @@
     position: relative;
     &::after {
       left:555px;
+      top:17px;
     }
     &::before {
       width: 100vw;
       left: calc(-1 * 100vw - 40px);
+      top:17px;
     }
   }
 }

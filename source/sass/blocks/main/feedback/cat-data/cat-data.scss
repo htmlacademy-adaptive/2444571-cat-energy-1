@@ -1,7 +1,7 @@
 .cat-data {
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:12px;
   padding-bottom:24px;
 }
 .cat-data__label {
@@ -50,8 +50,12 @@
 }
 
 @media (min-width: $tablet) {
+  .cat-data {
+    gap:19px;
+    padding-bottom:74px;
+  }
   .cat-data__input {
-    padding:3px 15px;
+    padding:3px 20px;
   }
   .cat-data__label {
     @include text-styles($font-primary, 20px, 400, normal, 0);
@@ -69,7 +73,7 @@
 @media (min-width:$desktop) {
   .cat-data {
     flex-basis:50%;
-    gap:20px;
+    gap:15px;
   }
   .cat-data__input {
     height: 48px;

@@ -2,9 +2,9 @@
 .program-data {
   display:flex;
   flex-direction: column;
-  gap:13px;
+  gap:18px;
   position:relative;
-  padding: 22px 0 20px 0px;
+  padding: 26px 0 20px 0px;
     &::before {
       content:'';
       display:block;
@@ -79,12 +79,14 @@
   .program-data__label {
     @include text-styles($font-primary, 20px, 400, normal, 0);
     padding-left:50px;
+    left:13px;
     &::before {
       content: '';
       width: 40px;
       height: 40px;
       border-radius: 50%;
       border:1px solid #CDCDCD;
+      left:-10px;
     }
   }
   .program-data__input {
