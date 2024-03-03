@@ -1,16 +1,17 @@
 .guide {
-  padding:$section-padding;
-  padding-bottom:49px;
+  padding: 0px 30px 49px
 }
 .guide__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
+  padding-top: 22px;
+  padding-left: 0px;
 }
 .guide__list {
   @include list-styles;
   padding-top:40px;
   display: grid;
   grid-template-columns: 1fr;
-  gap:26px;
+  gap:21px;
 }
 .guide__list-item {
   display: flex;

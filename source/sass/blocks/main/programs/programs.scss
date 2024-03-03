@@ -10,6 +10,9 @@
   margin:20px 0;
   background-color: $background-grey;
   position: relative;
+    &:nth-child(even) {
+      margin:0px;
+    }
 }
 .programs__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 37px, 0);
@@ -18,7 +21,7 @@
 .programs__text {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   color:$color-grey;
-  padding:22px 33px 23px 20px;
+  padding:25px 33px 2px 30px;
 }
 .programs__link {
   @include link-styles-reset;
@@ -27,7 +30,7 @@
   max-width:134px;
   text-transform: uppercase;
   padding:4px 0;
-  margin:15px 126px 18px 20px;
+  margin:15px 126px 18px 30px;
   display:inline-block;
     &:active {
       opacity: 0.3;
@@ -43,24 +46,27 @@
 
 @media (min-width: $mobile) {
   .programs__title--slim {
+    margin-left:24px;
+    line-height: 47px;
       &::before {
         content:url('../img/index/icons/cat_back_slim.svg');
         display:inline-block;
         width:36px;
         height:50px;
         margin-right:27px;
-        padding:24px 0 0 20px;
+        padding: 20px 8px 0 6px;
         vertical-align:bottom;
       }
   }
   .programs__title--fat {
+    line-height: 49px;
       &::before {
         content:url('../img/index/icons/cat_back_fat.svg');
         display:inline-block;
         width:36px;
         height:50px;
-        margin-right:43px;
-        padding:24px 0 0 20px;
+        margin-right:42px;
+        padding: 26px 0 0 23px;
         vertical-align:bottom;
       }
   }

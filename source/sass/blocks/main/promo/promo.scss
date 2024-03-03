@@ -3,7 +3,7 @@ background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
 background-repeat: no-repeat;
 background-position: 50%;
 background-size:cover;
-padding:27px 36px 164px 36px;
+padding:22px 36px 164px 36px;
   @media (min-resolution: 2dppx) {
     background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat_2x.webp');
     background-size:cover;
@@ -22,12 +22,14 @@ padding:27px 36px 164px 36px;
   margin-top:27px;
 }
 .promo__image {
+  position: relative;
+  bottom: 18px;
   background-image: url('../img/index/promo_cat_energy.webp');
   background-repeat: no-repeat;
   background-size:280px 270px;
   width:280px;
   height: 270px;
-  margin:-118px auto 0 auto;
+  margin:-118px auto -17px auto;
   @media (min-resolution:2dppx) {
     background-image: url('../img/index/promo_cat_energy_2x.webp');
   }
@@ -64,6 +66,7 @@ padding:27px 36px 164px 36px;
     margin-top:40px;
   }
   .promo__image {
+    position: static;
     background-image: url('../img/index/promo_cat_energy_tablet.webp');
     width:709px;
     height: 609px;
