@@ -8,7 +8,11 @@
   display:flex;
   justify-content: space-between;
   align-items:center;
-  gap:65px;
+  gap:74px;
+}
+.header__logo-link {
+  position: relative;
+  left:5px;
 }
 .header__logo-cat, .header__logo-link {
     &:active {
@@ -19,6 +23,9 @@
   @include button-styles-reset;
   width:24px;
   height:24px;
+  position: relative;
+  top:-2px;
+  right:9px;
 }
 .header__menu-list {
   @include list-styles;
@@ -76,6 +83,9 @@
     grid-template-columns:60px 10fr;
     column-gap:13px;
     padding:25px 34px 20px 30px;
+  }
+  .header__logo-link {
+    position: static;
   }
   .header__title-link {
     margin-top:-16px;

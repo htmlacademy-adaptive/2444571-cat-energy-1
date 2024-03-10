@@ -9,7 +9,7 @@
 }
 .example__text {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
-  padding-top:40px;
+  padding-top:44px;
   margin:0;
   color:$color-grey;
 }
@@ -35,6 +35,8 @@
   width:77px;
   margin-top:-19px;
   background-color: $background-grey;
+  position: relative;
+  right:7px;
 }
 
 .example__statistic-count {
@@ -47,6 +49,9 @@
   justify-content: center;
   border:1px solid #CDCDCD;
   border-radius: 5px;
+  position: relative;
+  bottom:2px;
+  left: -5px;
 }
 .example__price-inner {
   display:flex;
@@ -67,13 +72,27 @@
   justify-content: center;
   align-items: center;
   margin-top:20px;
+  position: relative;
+  right:5px;
 }
 
 @media (min-width:$mobile) {
   .example__loss {
     justify-self: end;
   }
+  .example__text-seporator {
+    display:none;
+  }
+  .example__loss {
+    @include text-styles($font-primary, 14px, 400, 20px, 0);
+    position: relative;
+    right:6px;
+  }
+  .example__price {
+    @include text-styles($font-primary, 14px, 400, 20px, 0);
+  }
 }
+
 @media (min-width:$tablet) {
   .example {
     background-color:#FFFFFF;
@@ -90,6 +109,9 @@
   }
   .example__title {
     padding:$section-padding-tablet;
+  }
+  .example__text-seporator {
+    display:block;
   }
   .example__content-inner {
     padding:$section-padding-tablet;
@@ -120,9 +142,6 @@
     linear-gradient(to bottom, #ffffff 30%, transparent 30%),
     linear-gradient(to bottom, #F2F2F2 100%, transparent 100%);
   }
-}
-
-@media(min-width:$tablet) {
   .example__price-inner {
     gap:9px;
   }
@@ -170,6 +189,9 @@
   .example__text {
     padding:0px;
     max-width:436px;
+  }
+  .example__text-seporator {
+    display:none;
   }
   .example__inner {
     grid-template-columns: 162px 162px;
