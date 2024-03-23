@@ -55,7 +55,7 @@
   .feedback__button-inner {
     flex-direction: row;
     gap:60px;
-    padding-bottom:85px;
+    padding-bottom:60px;
   }
   .feedback__button {
     @include title-styles($font-primary, 20px, 400, 26px, 0);
@@ -89,5 +89,10 @@
       color: rgba($color-white, 0.3);
     }
   }
-
+  .feedback__rules {
+    margin-left:16px;
+  }
+  .feedback__button-inner {
+    padding-bottom:80px;
+  }
 }
