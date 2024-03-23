@@ -2,8 +2,8 @@
   @include list-styles;
   display: flex;
   gap:24px;
+  margin-top:-7px;
 }
-
 .social-links__link svg {
   fill: #666666;
     &:active {
@@ -12,6 +12,12 @@
     }
 }
 
+@media(min-width:$tablet) {
+  .social-links {
+    margin:0px;
+    margin-left:40px;
+  }
+}
 @media (min-width: $desktop) {
   .social-links__link svg {
       &:hover {

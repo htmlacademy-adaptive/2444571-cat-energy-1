@@ -32,10 +32,11 @@
 
 @media (min-width:$tablet) {
   .show-more__text {
+    @include text-styles($font-primary, 20px, 400, 24px, 0);
     gap:50px;
     max-width:134px;
     text-align: center;
-    margin-bottom:23px;
+    margin: -6px 0 23px;
       &::before {
         content: url('../img/catalog/icons/plus_tablet.svg');
         width:60px;
@@ -56,8 +57,12 @@
 @media (min-width:$desktop) {
   .show-more__text {
     @include text-styles($font-primary, 20px, 400, 24px, 0);
-    gap:40px;
+    gap:34px;
     margin-bottom:26px;
+      &:before {
+        position: relative;
+        bottom:6px;
+      }
   }
   .show-more__content {
     margin-bottom: 90px;

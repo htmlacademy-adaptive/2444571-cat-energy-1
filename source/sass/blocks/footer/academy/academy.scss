@@ -3,6 +3,7 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
+  margin-top:-7px;
   width:280px;
     &:active {
       opacity:0.3;
@@ -15,7 +16,6 @@
   @include text-styles($font-secondary,16px, 400, 20px, 0);
   color:$color-grey;
 }
-
 .academy__logo {
   fill: #666666;
     &:active {
@@ -27,14 +27,18 @@
   .academy__link {
     width:168px;
     gap:23px;
-
+    position: relative;
+    left:4px;
   }
-
+  .academy__logo {
+    position: relative;
+    right:4px;
+  }
 }
 @media (min-width:$desktop) {
   .academy__logo {
     &:hover {
       fill:$background-green;
     }
-}
+  }
 }

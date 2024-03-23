@@ -1,22 +1,19 @@
-
 .promo__content {
 background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat.webp');
 background-repeat: no-repeat;
 background-position: 50%;
 background-size:cover;
-padding:27px 36px 164px 36px;
+padding:22px 36px 164px 36px;
   @media (min-resolution: 2dppx) {
     background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat_2x.webp');
     background-size:cover;
   }
 }
-
 .promo__title {
   @include text-styles($font-primary,$font-size-title,400,36px,0);
   color: $color-white;
   text-align: center;
 }
-
 .promo__text {
   @include text-styles($font-primary,14px,400,14px,0);
   color: $color-white;
@@ -25,17 +22,18 @@ padding:27px 36px 164px 36px;
   margin-top:27px;
 }
 .promo__image {
+  position: relative;
+  bottom: 18px;
   background-image: url('../img/index/promo_cat_energy.webp');
   background-repeat: no-repeat;
   background-size:280px 270px;
   width:280px;
   height: 270px;
-  margin:-118px auto 0 auto;
+  margin:-118px auto -17px auto;
   @media (min-resolution:2dppx) {
     background-image: url('../img/index/promo_cat_energy_2x.webp');
   }
 }
-
 .promo__link {
   @include link-styles-reset;
   display:block;
@@ -50,7 +48,6 @@ padding:27px 36px 164px 36px;
 }
 
 @media (min-width:$tablet) {
-
   .promo__content {
     background:none;
     padding:27px 30px 164px 30px;
@@ -69,6 +66,9 @@ padding:27px 36px 164px 36px;
     margin-top:40px;
   }
   .promo__image {
+    // position: relative;
+    // top:-6px;
+    // left:2px;
     background-image: url('../img/index/promo_cat_energy_tablet.webp');
     width:709px;
     height: 609px;
@@ -79,28 +79,74 @@ padding:27px 36px 164px 36px;
     }
   }
   .promo__link{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
     position: relative;
-    bottom: 586px;
-    left: -142px;
+    bottom: 569px;
+    left: -140px;
     padding:14px 26px 14px 26px;
   }
 }
 
 @media (min-width:$desktop) {
   .promo {
+    // max-width: 1440px;
+    // margin: 0 auto;
     position: relative;
   }
+  .promo__title {
+    position: relative;
+    top: 28px;
+    left: 69px;
+  }
+  .promo__text {
+    position: relative;
+    top: 28px;
+    left: 70px;
+  }
   .promo__link {
+    position: relative;
+    bottom: 84px;
+    left: -408px;
     &:hover {
       background-color:$background-green-hover;
     }
     &:active{
       color: rgba($color-white, 0.3);
     }
-    bottom: 98px;
-    left: -478px
   }
-
+  .promo__content {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .promo__image-wrapper {
+    position:absolute;
+    width:50vw;
+    height:694px;
+    bottom: -100px;
+    left:calc(100vw / 2);
+    right:0px;
+    background-color: #64a73c;
+    z-index:-10;
+      &::before {
+        content: url('../img/index/promo_cat_energy_desktop.webp');
+        display:inline-block;
+        width:709px;
+        height: 609px;
+        background-size:709px 609px;
+        position: absolute;
+        top:128px;
+        left:-161px;
+        z-index:10;
+        @media (min-resolution: 2dppx) {
+          content: url('../img/index/promo_cat_energy_desktop_2x.webp');
+          background-size: 354.5px 304.5px;
+          transform: scale(.5);
+          top:-11px;
+          left:-349px;
+        }
+  }
   .promo__image {
     background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat_desktop.webp');
     width:720px;
@@ -108,25 +154,8 @@ padding:27px 36px 164px 36px;
     background-size:720px 694px;
     margin:0;
     position: absolute;
-    top: -171px;
-    right: 0;
-    z-index: -1;
-      &::before {
-        content: url('../img/index/promo_cat_energy_desktop.webp');
-        display:inline-block;
-        width:709px;
-        height: 609px;
-        background-size:709px 609px;
-        position: relative;
-        top:128px;
-        right:163px;
-        @media (min-resolution: 2dppx) {
-          content: url('../img/index/promo_cat_energy_desktop_2x.webp');
-          background-size: 354.5px 304.5px;
-          transform: scale(.5);
-          top:0px;
-          right:340px;
-        }
+    top:0px;
+    right:0px;
       }
       @media (min-resolution: 2dppx) {
         background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url('../img/index/promo_cat_desktop_2x.webp');
