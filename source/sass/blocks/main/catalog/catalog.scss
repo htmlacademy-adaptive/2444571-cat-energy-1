@@ -2,6 +2,9 @@
   max-width:$mobile;
   margin:0 auto;
 }
+.main--catalog {
+  overflow-x: hidden;
+}
 .catalog__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
   padding: 25px 42px 41px 20px;

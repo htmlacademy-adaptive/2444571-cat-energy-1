@@ -75,8 +75,6 @@
   position: relative;
   right:5px;
 }
-
-@media (min-width:$mobile) {
   .example__loss {
     justify-self: end;
   }
@@ -91,7 +89,7 @@
   .example__price {
     @include text-styles($font-primary, 14px, 400, 20px, 0);
   }
-}
+
 
 @media (min-width:$tablet) {
   .example {
