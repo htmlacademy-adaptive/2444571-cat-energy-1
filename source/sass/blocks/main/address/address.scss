@@ -1,7 +1,7 @@
 
 .address__inner {
   display: flex;
-  padding: 19px 30px;
+  padding: 19px 20px;
 }
 .address__text {
   @include text-styles($font-primary,16px, 400, 20px, 0);

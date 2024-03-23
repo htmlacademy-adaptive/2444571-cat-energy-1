@@ -21,7 +21,7 @@
 .programs__text {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
   color:$color-grey;
-  padding:25px 33px 2px 30px;
+  padding:25px 33px 2px 20px;
 }
 .programs__link {
   @include link-styles-reset;
@@ -30,7 +30,7 @@
   max-width:134px;
   text-transform: uppercase;
   padding:4px 0;
-  margin:15px 126px 18px 30px;
+  margin: 0px 126px 18px 21px;
   display:inline-block;
     &:active {
       opacity: 0.3;
@@ -54,7 +54,7 @@
         width:36px;
         height:50px;
         margin-right:27px;
-        padding: 20px 8px 0 6px;
+        padding: 20px 8px 0 0px;
         vertical-align:bottom;
       }
   }
@@ -66,7 +66,7 @@
         width:36px;
         height:50px;
         margin-right:42px;
-        padding: 26px 0 0 23px;
+        padding: 22px 0 0 14px;
         vertical-align:bottom;
       }
   }
@@ -80,10 +80,14 @@
 @media (min-width: $tablet) {
   .programs {
     padding:$section-padding-tablet;
-    padding-bottom: 45px;
+    padding-bottom: 36px;
   }
   .programs__break-hr {
     display:none;
+  }
+  .programs__list {
+    margin-top: -63px;
+    gap:4px;
   }
   .programs__title {
     @include title-styles($font-primary, 36px, 400, 36px, 0);
@@ -95,11 +99,15 @@
     padding:0px;
   }
   .programs__link {
+    @include text-styles($font-primary, 20px, 400, 30px, 0);
     margin: 52px 126px 0px 0px;
-    max-width:165px;
+    max-width:170px;
   }
   .programs__link-arrow {
     margin-left:25px;
+    position: relative;
+    bottom: 6px;
+    right: 4px;
   }
   .programs__title--slim {
     &::before {
@@ -122,7 +130,8 @@
         content:url('../img/index/icons/cat_black_slim_tablet.svg');
         display:inline-block;
         position: absolute;
-        right:63px;
+        right:60px;
+        bottom:83px;
       }
   }
   .programs__item--fat {
@@ -130,28 +139,35 @@
       content:url('../img/index/icons/cat_back_fat_tablet.svg');
       display:inline-block;
       position: absolute;
-      right:29px;
-      bottom: 98px;
+      right:25px;
+      bottom: 86px;
     }
+  }
+  .programs__text-seporator {
+    display:none;
   }
 }
 
 @media (min-width:$desktop) {
   .programs {
     padding:$section-padding-desktop;
-    padding-bottom:71px;
+    padding-bottom:48px;
     padding-top:162px;
   }
   .programs__list{
     justify-content: center;
     flex-direction:row;
     gap:80px;
+    margin-top:0px;
   }
   .programs__item {
     display:block;
     flex-basis:570px;
     padding:0px;
     padding-top:77px;
+      &:nth-child(even) {
+        margin:20px 0;
+      }
   }
   .programs__item--slim,
   .programs__item--fat {
@@ -189,12 +205,12 @@
       }
     }
   .programs__text {
-    padding:39px 61px 27px 52px;
+    padding:48px 61px 27px 52px;
     max-width:457px;
   }
   .programs__link {
-    max-width:168px;
-    margin:27px 350px 55px 52px;
+    max-width:170px;
+    margin:0px 350px 55px 52px;
       &::after {
         margin-left:25px;
       }

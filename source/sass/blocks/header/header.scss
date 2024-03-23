@@ -8,11 +8,10 @@
   display:flex;
   justify-content: space-between;
   align-items:center;
-  gap:74px;
+  gap:61px;
 }
 .header__logo-link {
   position: relative;
-  left:5px;
 }
 .header__logo-cat, .header__logo-link {
     &:active {
@@ -25,7 +24,7 @@
   height:24px;
   position: relative;
   top:-2px;
-  right:9px;
+  right:-5px;
 }
 .header__menu-list {
   @include list-styles;

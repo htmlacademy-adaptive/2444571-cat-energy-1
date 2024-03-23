@@ -1,9 +1,9 @@
 .guide {
-  padding: 0px 30px 49px
+  padding: 0px 20px 49px
 }
 .guide__title {
   @include title-styles($font-primary, $font-size-title, 400, 36px, 0);
-  padding-top: 22px;
+  padding-top: 38px;
   padding-left: 0px;
 }
 .guide__list {
@@ -58,9 +58,13 @@
     padding:$section-padding-tablet;
     padding-bottom: 47px;
   }
+  .guide__title {
+    @include title-styles($font-primary, 60px, 400, 60px, 0);
+    padding-top:0px;
+  }
   .guide__list {
     grid-template: 230px 230px/280px 280px;
-    gap:37px 153px;
+    gap:86px 103px;
     align-items:flex-start;
     padding-top:72px;
   }
@@ -77,19 +81,23 @@
       }
       &:nth-child(1)::after {
         content:"1";
-        left:120px;
+        left: 118px;
+        top: -39px;
       }
       &:nth-child(2)::after {
         content:"2";
-        left:120px;
+        left: 112px;
+        top: -39px;
       }
       &:nth-child(3)::after {
         content:"3";
-        left:120px;
+        left: 113px;
+        top: -39px;
       }
       &:nth-child(4)::after {
         content:"4";
-        left:120px;
+        left: 115px;
+        top: -39px;
       }
   }
   .guide__list-content {
@@ -97,7 +105,36 @@
     font-size:16px;
     line-height: 24px;
     align-items: flex-start;
-    max-width:204px;
+    max-width:242px;
+    gap:50px;
+  }
+  .guide__list-content--tree {
+    &::before {
+      content:url('../img/index/icons/list_img_1_tablet.svg');
+      width:60px;
+      height:60px;
+    }
+  }
+  .guide__list-content--water {
+    &::before {
+      content:url('../img/index/icons/list_img_2_tablet.svg');
+      width:60px;
+      height:60px;
+    }
+  }
+  .guide__list-content--fork {
+    &::before {
+      content:url('../img/index/icons/list_img_3_tablet.svg');
+      width:60px;
+      height:60px;
+    }
+  }
+  .guide__list-content--gram {
+    &::before {
+      content:url('../img/index/icons/list_img_4_tablet.svg');
+      width:60px;
+      height:60px;
+    }
   }
 }
 
@@ -115,7 +152,7 @@
   .guide__list {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows:1fr;
-    gap:95px;
+    gap:80px;
   }
 }
 
