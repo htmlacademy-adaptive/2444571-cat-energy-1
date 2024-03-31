@@ -38,7 +38,6 @@
   position: relative;
   right:7px;
 }
-
 .example__statistic-count {
   @include text-styles($font-primary, $font-size-title-list, 400, 24px, 0);
   white-space: nowrap;
@@ -90,7 +89,6 @@
     @include text-styles($font-primary, 14px, 400, 20px, 0);
   }
 
-
 @media (min-width:$tablet) {
   .example {
     background-color:#FFFFFF;
@@ -132,7 +130,6 @@
     height: 77px;
     bottom:6px;
     left:0px;
-
   }
   .example__statistic-info {
     @include text-styles($font-secondary, 14px, 400, 14px, 0);
@@ -170,7 +167,6 @@
 }
 
 @media (min-width:$desktop) {
-
   .example {
     padding:0px;
     border-top:none;
@@ -216,7 +212,6 @@
     grid-template-rows: 1fr;
     margin-top:0px;
     padding-top:68px;
-    
   }
   .example__statistic-info {
     background-color: $background-grey;
@@ -228,7 +223,6 @@
     top:21px;
     gap:95px;
   }
-
   .example__price {
     grid-column: span 2;
   }

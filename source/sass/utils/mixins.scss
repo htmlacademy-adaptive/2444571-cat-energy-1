@@ -7,11 +7,12 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-};
+}
+
 @mixin list-styles {
   list-style-type: none;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin title-styles($font-family, $font-size, $font-weight, $line-height, $margin) {
@@ -33,14 +34,15 @@
 }
 
 @mixin link-styles-reset {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:link,
+  &:visited {
     text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    &:link,
-    &:visited {
-      text-decoration: none;
-    }
   }
+}
 
 @mixin button-styles-reset {
   margin: 0;
@@ -51,6 +53,4 @@
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-
 }
-

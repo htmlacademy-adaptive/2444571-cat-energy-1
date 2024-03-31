@@ -1,76 +1,87 @@
 .show-more {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .show-more__text {
   @include text-styles($font-primary, 16px, 400, 20px, 0);
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap:23px;
+  gap: 23px;
   text-transform: uppercase;
-  margin-bottom:8px;
-    &::before {
-      content: url('../img/catalog/icons/plus.svg');
-      width:30px;
-      height:30px;
-    }
+  margin-bottom: 8px;
+
+  &::before {
+    content: url("../img/catalog/icons/plus.svg");
+    width: 30px;
+    height: 30px;
+  }
 }
+
 .show-more__content {
   @include text-styles($font-secondary, 12px, 400, 16px, 0);
-  color:$color-grey;
+  color: $color-grey;
   margin-bottom: 21px;
 }
+
 .show-more__link {
   @include link-styles-reset;
   @include text-styles($font-primary, 16px, 400, 20px, 0);
   text-transform: uppercase;
-  padding:10px 95px;
+  padding: 10px 95px;
   background-color: $background-grey;
 }
 
-@media (min-width:$tablet) {
+@media (min-width: $tablet) {
   .show-more__text {
     @include text-styles($font-primary, 20px, 400, 24px, 0);
-    gap:50px;
-    max-width:134px;
+    gap: 50px;
+    max-width: 134px;
     text-align: center;
     margin: -6px 0 23px;
-      &::before {
-        content: url('../img/catalog/icons/plus_tablet.svg');
-        width:60px;
-        height:60px;
-      }
+
+    &::before {
+      content: url("../img/catalog/icons/plus_tablet.svg");
+      width: 60px;
+      height: 60px;
+    }
   }
+
   .show-more__content {
     @include text-styles($font-secondary, 16px, 400, 18px, 0);
-    max-width:170px;
-    text-align:center;
+    max-width: 170px;
+    text-align: center;
     margin-bottom: 82px;
   }
+
   .show-more__link {
-    padding:10px 80px;
+    padding: 10px 80px;
   }
 }
 
-@media (min-width:$desktop) {
+@media (min-width: $desktop) {
   .show-more__text {
     @include text-styles($font-primary, 20px, 400, 24px, 0);
-    gap:34px;
-    margin-bottom:26px;
-      &:before {
-        position: relative;
-        bottom:6px;
-      }
+    gap: 34px;
+    margin-bottom: 26px;
+
+    &::before {
+      position: relative;
+      bottom: 6px;
+    }
   }
+
   .show-more__content {
     margin-bottom: 90px;
   }
+
   .show-more__link {
-    padding:10px 39px;
-      &:hover{
-        background-color: #EBEBEB;
-      }
+    padding: 10px 39px;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
   }
 }
