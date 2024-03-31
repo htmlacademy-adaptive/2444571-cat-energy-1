@@ -1,10 +1,18 @@
 body {
   font-family: $font-primary;
-  color:$color-black;
+  color: $color-black;
   margin: 0 auto;
   box-sizing: border-box;
-  max-width:$desktop;
+  overflow-x: hidden;
 }
-.visually-hidden {
-  @include visually-hidden;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
 }

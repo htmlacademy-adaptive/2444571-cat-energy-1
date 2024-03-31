@@ -1,136 +1,145 @@
 
 .program-data {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:13px;
-  position:relative;
-  padding: 22px 0 20px 0px;
+  gap: 18px;
+  position: relative;
+  padding: 26px 0 20px 0;
 
-    &::before {
-      content:'';
-      display:block;
-      width:102vw;
-      height:1px;
-      background-color:#D9D9D9;
-      position: absolute;
-      top:0px;
-      left: -21px;
-    }
-    &::after {
-      content:'';
-      display:block;
-      width:102vw;
-      height:1px;
-      background-color:#D9D9D9;
-      position: absolute;
-      bottom:0px;
-      left: -21px;
-    }
+  &::before {
+    content: "";
+    display: block;
+    width: 102vw;
+    height: 1px;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 0;
+    left: -21px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 102vw;
+    height: 1px;
+    background-color: #d9d9d9;
+    position: absolute;
+    bottom: 0;
+    left: -21px;
+  }
 }
 
 .program-data__input {
-  display:none;
-    &:checked + .program-data__label::after {
-      // content: url('../img/form/radio/radiobutton_checked.svg');
-      content:'';
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background-color: #68B738;
-      position:absolute;
-      left: 9px;
-      top: 5px; //TODO мб есть лучше варианты как позиционировать, кроме как подгонять по пикселям?
-    }
-    &:disabled + .program-data__label {
-      opacity: 0.3;
-      cursor: not-allowed;
-    }
+  display: none;
+
+  &:checked + .program-data__label::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #68b738;
+    position: absolute;
+    left: 9px;
+    top: 5px;
+  }
+
+  &:disabled + .program-data__label {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 }
 
 .program-data__label {
   @include text-styles($font-primary, 16px, 400, 18px, 0);
   text-transform: uppercase;
-  color:$color-grey;
+  color: $color-grey;
   position: relative;
   padding-left: 45px;
   cursor: pointer;
-    &::before {
-      // content: url('../img/form/radio/radiobutton_clear.svg');
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      border:1px solid #CDCDCD;
-    }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #cdcdcd;
+  }
 }
 
 @media (min-width: $tablet) {
   .program-data {
     &::before {
-      display:none;
+      display: none;
     }
+
     &::after {
-      display:none;
+      display: none;
     }
-    border:1px solid #E7E7E7;
-    padding:23px 0px 27px 23px;
+    border: 1px solid #e7e7e7;
+    padding: 23px 0 27px 23px;
     height: 144px;
-    justify-content: space-around; //TODO сомнительно, не понимаю как норм сделать высоту.
+    justify-content: space-around;
   }
 
   .program-data__label {
     @include text-styles($font-primary, 20px, 400, normal, 0);
-    padding-left:50px;
+    padding-left: 50px;
+    left: 13px;
+
     &::before {
-      // content: url('../img/form/radio/radiobutton_clear.svg'); //TODO как лучше рисовать самому или вставлять свг?
-      content: '';
+      content: "";
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border:1px solid #CDCDCD;
+      border: 1px solid #cdcdcd;
+      left: -10px;
     }
   }
 
   .program-data__input {
-    display:none;
-      &:checked + .program-data__label::after {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background-color: #68B738;
-        position:absolute;
-        left: 12px;
-        top: 6px;
-      }
+    display: none;
+
+    &:checked + .program-data__label::after {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #68b738;
+      position: absolute;
+      left: 12px;
+      top: 6px;
+    }
   }
 }
-@media (min-width:$desktop) {
+
+@media (min-width: $desktop) {
   .program-data {
-    flex-basis:50%;
-    gap:13px;
+    flex-basis: 50%;
+    gap: 13px;
   }
+
   .program-data__label {
-      &::before {
-        transform: translateY(-37%); //TODO не понимаю как подругоу отцентрвоать радиобаттон и текст лейбла
-      }
-      &:hover::before {
-        border-color:#BABABA;
-      }
+    &::before {
+      transform: translateY(-37%);
+    }
+
+    &:hover::before {
+      border-color: #bababa;
+    }
   }
+
   .program-data__input {
     &:checked + .program-data__label::after {
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background-color: #68B738;
-      position:absolute;
+      background-color: #68b738;
+      position: absolute;
       left: 12px;
       top: 11px;
     }
   }
 }
-

@@ -1,40 +1,51 @@
 .academy__link {
   @include link-styles-reset;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width:280px;
-    &:active {
-      opacity:0.3;
-    }
-    &:active svg {
-      fill:$background-green;
-    }
+  margin-top: -7px;
+  width: 280px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active svg {
+    fill: $background-green;
+  }
 }
+
 .academy__text {
   @include text-styles($font-secondary,16px, 400, 20px, 0);
-  color:$color-grey;
+  color: $color-grey;
 }
 
 .academy__logo {
   fill: #666666;
-    &:active {
-      fill:$background-green;
-    }
+
+  &:active {
+    fill: $background-green;
+  }
 }
 
-@media (min-width:$tablet) {
+@media (min-width: $tablet) {
   .academy__link {
-    width:168px;
-    gap:23px;
-
+    width: 168px;
+    gap: 23px;
+    position: relative;
+    left: 4px;
   }
 
+  .academy__logo {
+    position: relative;
+    right: 4px;
+  }
 }
-@media (min-width:$desktop) {
+
+@media (min-width: $desktop) {
   .academy__logo {
     &:hover {
-      fill:$background-green;
+      fill: $background-green;
     }
-}
+  }
 }

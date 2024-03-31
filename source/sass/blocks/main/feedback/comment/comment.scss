@@ -1,16 +1,21 @@
+.comment {
+  padding-bottom: 38px;
+}
+
 .comment__title {
   @include title-styles($font-primary, $font-size-title-list, 400, 26px, 0);
   margin-bottom: 38px;
-  display:flex;
+  display: flex;
   align-items: center;
+
   &::after {
-    content:"";
-    display:inline-block;
-    width:159px;
-    height:2px;
-    background-color:$background-green;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: $background-green;
     position: absolute;
-    right: 0px;
+    width: 100vw;
+    left: 168px;
   }
 }
 
@@ -19,71 +24,91 @@
 }
 
 .comment__textarea {
-  width:100%;
-  outline:none;
-  border:1px solid #E7E7E7;
-  margin-bottom:23px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #e7e7e7;
   height: 150px;
   box-sizing: border-box;
-    &::placeholder {
-      @include text-styles($font-primary, 16px, 400, 18px, 0);
-      text-transform: uppercase;
-      color:$color-grey;
-      padding:14px 15px 0px 15px;
-      white-space: nowrap;
-    }
-    &:not(:placeholder-shown) {
-      @include text-styles($font-primary, 16px, 400, 18px, 0);
-      text-transform: uppercase;
-      color:$color-grey;
-      padding-left:14px;
-      padding-top:14px;
-    }
+  padding: 14px 15px 0 15px;
+
+  &::placeholder {
+    @include text-styles($font-primary, 16px, 400, 18px, 0);
+    text-transform: uppercase;
+    color: $color-grey;
+    white-space: nowrap;
+  }
+
+  &:not(:placeholder-shown) {
+    @include text-styles($font-primary, 16px, 400, 18px, 0);
+    text-transform: uppercase;
+    color: $color-grey;
+    padding-left: 14px;
+    padding-top: 14px;
+  }
 }
 
 @media (min-width: $tablet) {
+  .comment {
+    padding-bottom: 82px;
+  }
+
   .comment__title {
     @include text-styles($font-primary, 36px, 400, 36px, 0);
-    margin-bottom:87px;
+    margin-bottom: 87px;
+
     &::after {
-      width:476px;
+      left: 290px;
+      top: 1232px;
     }
+
     &::before {
-      content:"";
-      display:inline-block;
-      width:30px;
-      height:2px;
-      background-color:$background-green;
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background-color: $background-green;
       position: absolute;
-      left: 0px;
+      left: 0;
+      top: 1232px;
     }
   }
+
   .comment__textarea {
-    margin-bottom: 65px;
     height: 175px;
+    padding: 11px 20px 0;
+
     &::placeholder {
       @include text-styles($font-primary, 20px, 400, 30px, 0);
     }
+
     &:not(:placeholder-shown) {
       @include text-styles($font-primary, 20px, 400, 30px, 0);
     }
   }
 }
 
-@media (min-width:$desktop) {
+@media (min-width: $desktop) {
+  .comment {
+    padding-bottom: 84px;
+  }
+
   .comment__title {
-    margin-bottom:78px;
+    margin-bottom: 78px;
     position: relative;
+
     &::after {
-      width:1108px;
-      right: -111px;
+      left: 220px;
+      top: 18px;
     }
+
     &::before {
-      width:70px;
-      left:-110px;
+      width: 100vw;
+      left: calc(-1 * 100vw - 40px);
+      top: 18px;
     }
   }
+
   .comment__textarea {
-    margin-bottom: 70px;
+    padding: 6px 20px 0;
   }
 }

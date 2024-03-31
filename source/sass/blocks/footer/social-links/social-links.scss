@@ -1,21 +1,30 @@
 .social-links {
   @include list-styles;
   display: flex;
-  gap:24px;
+  gap: 24px;
+  margin-top: -7px;
 }
 
 .social-links__link svg {
   fill: #666666;
-    &:active {
-      fill:$background-green;
-      opacity:0.3;
-    }
+
+  &:active {
+    fill: $background-green;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet) {
+  .social-links {
+    margin: 0;
+    margin-left: 40px;
+  }
 }
 
 @media (min-width: $desktop) {
   .social-links__link svg {
-      &:hover {
-        fill:$background-green;
-      }
+    &:hover {
+      fill: $background-green;
+    }
   }
 }

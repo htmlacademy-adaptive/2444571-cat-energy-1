@@ -1,73 +1,95 @@
 .cat-data {
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  padding-bottom:24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 24px;
 }
 
 .cat-data__label {
   text-transform: uppercase;
-  color:$color-grey;
+  color: $color-grey;
 }
+
 .cat-data__input {
-  flex-grow:1;
-  height:45px;
-  border:1px solid #E7E7E7;
-    &::placeholder {
-      @include text-styles($font-primary, 16px, 400, 18px, 0);
-      text-transform: uppercase;
-      color:$color-grey;
-      padding:14px 164px 13px 15px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%)
-    }
-    &:not(:placeholder-shown) {
-      @include text-styles($font-primary, 16px, 400, 18px, 0);
-      text-transform: uppercase;
-      color:$color-grey;
-      padding-left:15px;
-    }
-    &:focus {
-      outline: none;
-      border:2px solid $color-grey;
-    }
-    &:invalid:not(:placeholder-shown) {
-      border:2px solid #FF8282;
-    }
+  flex-grow: 1;
+  height: 45px;
+  padding: 0 0 0 15px;
+  border: 1px solid #e7e7e7;
+
+  &::placeholder {
+    @include text-styles($font-primary, 16px, 400, 18px, 0);
+    text-transform: uppercase;
+    color: $color-grey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:not(:placeholder-shown) {
+    @include text-styles($font-primary, 16px, 400, 18px, 0);
+    text-transform: uppercase;
+    color: $color-grey;
+    padding-left: 15px;
+  }
+
+  &:focus {
+    outline: 2px solid $color-grey;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid #ff8282;
+  }
+
+  &::-webkit-outer-spin-button &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+  appearance: textfield;
 }
+
 .cat-data__name-inner,
 .cat-data__weight-inner,
 .cat-data__age-inner {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:13px;
+  gap: 13px;
 }
 
 @media (min-width: $tablet) {
+  .cat-data {
+    gap: 19px;
+    padding-bottom: 74px;
+  }
+
   .cat-data__label {
     @include text-styles($font-primary, 20px, 400, normal, 0);
   }
+
   .cat-data__input {
+    padding: 3px 20px;
+
     &::placeholder {
       @include text-styles($font-primary, 20px, 400, normal, 0);
     }
+
     &:not(:placeholder-shown) {
       @include text-styles($font-primary, 20px, 400, normal, 0);
     }
   }
 }
 
-@media (min-width:$desktop) {
+@media (min-width: $desktop) {
   .cat-data {
-    flex-basis:50%;
-    gap:20px;
+    flex-basis: 50%;
+    gap: 15px;
   }
+
   .cat-data__input {
     height: 48px;
-      &:hover {
-      border-color:#CDCDCD;
-      }
+
+    &:hover {
+      border-color: #cdcdcd;
+    }
   }
 }

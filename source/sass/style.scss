@@ -3,6 +3,7 @@
 @import "utils/mixins.scss";
 @import "global/fonts.scss";
 @import "global/global.scss";
+@import "global/visually-hidden.scss";
 @import "blocks/header/header.scss";
 @import "blocks/footer/footer.scss";
 @import "blocks/main/promo/promo.scss";
@@ -19,9 +20,9 @@
 @import "blocks/main/catalog/additional/product-list-add/product-list-add.scss";
 @import "blocks/footer/social-links/social-links.scss";
 @import "blocks/main/catalog/product-item/product-item.scss";
-@import "blocks/main/catalog/product-list-add/product-list-add.scss";
 @import "blocks/main/catalog/product-item-add/product-item-add.scss";
 @import "blocks/main/feedback/cat-data/cat-data.scss";
 @import "blocks/footer/academy/academy.scss";
+@import "blocks/main/main.scss";
 @import "blocks/main/catalog/product-item/show-more/show-more.scss";
 @import "blocks/main/feedback/program-data/program-data.scss";

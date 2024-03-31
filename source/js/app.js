@@ -1,8 +1,12 @@
 const burgerBtn = document.querySelector('.header__burger-menu')
-const headerMenuList  =document.querySelector('.header__menu-list')
+const headerMenuList  = document.querySelector('.header__menu-list')
 const screenWidth = window.innerWidth
 
-burgerBtn.addEventListener('click', ()=>{
+document.addEventListener("DOMContentLoaded", () => {
+  headerMenuList.classList.remove('header__menu-list--no-js')
+})
+
+burgerBtn.addEventListener('click', ()=> {
   if(headerMenuList.classList.contains('header__menu-list--closed')) {
     headerMenuList.classList.remove('header__menu-list--closed')
     headerMenuList.classList.add('header__menu-list--opened')
@@ -25,17 +29,11 @@ function currentPath () {
 
 function addActiveLinkTablet () {
   const lastPart = currentPath()
-  const element = document.querySelector(`a[href="${lastPart}"]`)
-  const allElementsExceptLastPart = headerMenuList.querySelectorAll(`a:not([href="${lastPart}"])`)
+  const element = document.querySelector(`a[href="#"]`)
+  const allElementsExceptLastPart = headerMenuList.querySelectorAll(`a:not([href="#"])`)
   if (screenWidth >= 768) {
-    element.classList.add('header__menu-link--active');
-    allElementsExceptLastPart.forEach((aTag) => {
-      aTag.classList.add('header__menu-link--down')
-    })
+    element?.classList.add('header__menu-link--active');
   }
 }
 
-
 addActiveLinkTablet()
-
-

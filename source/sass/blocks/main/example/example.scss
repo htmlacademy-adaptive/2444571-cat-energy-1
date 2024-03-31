@@ -1,6 +1,6 @@
 .example {
-  background-color:$background-grey;
-  padding:25px 20px 40px 20px;
+  background-color: $background-grey;
+  padding: 25px 20px 40px 20px;
   display: flex;
   flex-direction: column;
 }
@@ -11,168 +11,240 @@
 
 .example__text {
   @include text-styles($font-secondary, $font-size-text, 400, 18px, 0);
-  padding-top:40px;
-  margin:0;
-  color:$color-grey;
+  padding-top: 44px;
+  margin: 0;
+  color: $color-grey;
 }
 
 .example__inner {
-  align-self:center;
-  gap:20px 32px;
-  display:grid;
+  align-self: center;
+  gap: 30px 32px;
+  display: grid;
   grid-template-columns: minmax(124px, 1fr) minmax(124px, 1fr);
   grid-template-rows: 1fr 20px;
-  margin-top:20px;
-  text-align:center;
+  margin-top: 20px;
+  text-align: center;
 }
+
 .example__statistic-inner {
-  justify-self:center;
+  justify-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:8px;
+  gap: 8px;
 }
 
 .example__statistic-info {
   @include text-styles($font-secondary, $font-size-small, 400, 12px, 0);
-  color:$color-grey;
-  width:77px;
-  margin-top:-19px;
+  color: $color-grey;
+  width: 77px;
+  margin-top: -19px;
   background-color: $background-grey;
+  position: relative;
+  right: 7px;
 }
 
 .example__statistic-count {
   @include text-styles($font-primary, $font-size-title-list, 400, 24px, 0);
   white-space: nowrap;
-  // padding:14px 42px 31px 42px;
   display: flex;
   width: 124px;
-  height: 56px;
+  min-height: 56px;
   align-items: center;
   justify-content: center;
-  border:1px solid #CDCDCD;
+  border: 1px solid #cdcdcd;
   border-radius: 5px;
+  position: relative;
+  bottom: 2px;
+  left: -5px;
 }
 
-
 .example__price-inner {
-  display:flex;
+  display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   grid-column: span 2;
   text-transform: uppercase;
   height: fit-content;
 }
 
 .example__loss {
-  margin:0px
+  @include text-styles($font-primary, 14px, 400, 20px, 0);
+  position: relative;
+  right: 6px;
+  margin: 0;
+  justify-self: end;
 }
 
 .example__price {
-  margin: 0px;
+  @include text-styles($font-primary, 14px, 400, 20px, 0);
+  margin: 0;
 }
-
 
 .example__image-wrapper {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:20px;
+  margin-top: 20px;
+  position: relative;
+  right: 5px;
 }
 
-@media (min-width:$mobile) {
-  .example__loss {
-    justify-self: end;
-  }
+.example__text-seporator {
+  display: none;
 }
-@media (min-width:$tablet) {
 
+@media (min-width: $tablet) {
   .example {
-    background-color:#FFFFFF;
-    // padding:$section-padding-tablet;
-    padding:0;
-    padding-top:45px;
-    border-top:1px solid $background-grey;
+    background-color: #ffffff;
+    padding: 0;
+    padding-top: 55px;
+    border-top: 1px solid $background-grey;
   }
+
   .example__inner {
-    width:100%;
-    align-self:flex-start;
+    width: 100%;
+    align-self: flex-start;
     grid-template-columns: 164px 164px 1fr;
     grid-template-rows: 1fr;
-    padding-top:55px;
+    padding-top: 35px;
   }
+
   .example__title {
-    padding:$section-padding-tablet;
+    @include title-styles($font-primary, 60px, 400, 60px, 0);
+    padding: $section-padding-tablet;
   }
+
+  .example__text {
+    padding-top: 61px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .example__content-inner {
-    padding:$section-padding-tablet;
+    padding: $section-padding-tablet;
   }
+
   .example__statistic-inner {
     grid-row: span 2;
   }
+
+  .example__text-seporator {
+    display: none;
+  }
+
   .example__statistic-count {
     @include text-styles($font-primary, 30px, 400, 30px, 0);
-    width:162px;
+    width: 162px;
     height: 77px;
+    bottom: 6px;
+    left: 0;
   }
+
   .example__statistic-info {
     @include text-styles($font-secondary, 14px, 400, 14px, 0);
-    margin-top:-19px;
+    margin-top: -19px;
     background-color: $color-white;
-    width:112px;
+    width: 112px;
     white-space: nowrap;
-
   }
+
   .example__price-inner {
     flex-direction: column;
-    align-items:flex-end;
+    align-items: flex-end;
     grid-column: span 1;
+    position: relative;
+    top: 10px;
+    left: 7px;
+    gap: 9px;
   }
+
   .example__image-wrapper {
-    margin-top:99px;
+    padding-bottom: 94px;
+    margin-top: 99px;
     background:
-    linear-gradient(to bottom, #ffffff 30%, transparent 30%),
-    linear-gradient(to bottom, #F2F2F2 100%, transparent 100%);
+      linear-gradient(to bottom, #ffffff 15%, transparent 30%),
+      linear-gradient(to bottom, #f2f2f2 100%, transparent 100%);
+    right: -2px;
+    bottom: 6px;
+  }
+
+  .example__loss {
+    @include text-styles($font-primary, 20px, 400, 20px, 0);
+  }
+
+  .example__price {
+    @include text-styles($font-primary, 20px, 400, 20px, 0);
   }
 }
-@media (min-width:$desktop) {
 
+@media (min-width: $desktop) {
   .example {
-    padding:0px;
-    border-top:none;
+    padding: 0;
+    border-top: none;
+    background:
+      linear-gradient(to bottom, #ffffff 33%, transparent 30%),
+      linear-gradient(to bottom, #f2f2f2 100%, transparent 100%);
   }
+
+  .example__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .example__content-image-wrapper {
-    display:flex;
-    gap:224px;
+    display: flex;
+    gap: 224px;
     background: $background-grey;
   }
-  .example__image-wrapper {
-    margin-top: -176px;
 
+  .example__image-wrapper {
+    margin-top: -131px;
+    padding-bottom: 75px;
+    background: linear-gradient(to bottom, #ffffff 23%, transparent 13%), linear-gradient(to bottom, #f2f2f2 100%, transparent 100%);
   }
+
   .example__title-inner {
-    padding:69px 0px 76px 110px;
+    padding: 56px 0 76px 110px;
   }
+
+  .example__title {
+    @include title-styles($font-primary, 60px, 400, 60px, 0);
+    padding: 0;
+  }
+
   .example__content-inner {
-    padding:70px 0px 75px 110px;
+    padding: 70px 0 75px 110px;
     background-color: $background-grey;
   }
+
   .example__text {
-    padding:0px;
-    max-width:436px;
+    padding: 0;
+    max-width: 436px;
   }
+
+  .example__text-seporator {
+    display: none;
+  }
+
   .example__inner {
     grid-template-columns: 162px 162px;
     grid-template-rows: 1fr;
-    margin-top:0px;
+    margin-top: 0;
+    padding-top: 68px;
   }
+
   .example__statistic-info {
     background-color: $background-grey;
   }
+
   .example__price-inner {
     flex-direction: row;
     grid-column: span 2;
     justify-content: space-around;
+    top: 21px;
+    gap: 95px;
   }
 
   .example__price {

@@ -76,14 +76,13 @@ export const svg = () => {
 
 //Sprite
 export const sprits = () => {
-  return gulp.src('source/img/icons/*.svg' )
+  return gulp.src(['source/img/icons/*.svg', 'source/img/form/text/*.svg'] )
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg:true
     }))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'))
-
 }
 
 // Clone
