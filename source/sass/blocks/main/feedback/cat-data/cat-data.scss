@@ -62,15 +62,13 @@
     padding-bottom: 74px;
   }
 
-  .cat-data__input {
-    padding: 3px 20px;
-  }
-
   .cat-data__label {
     @include text-styles($font-primary, 20px, 400, normal, 0);
   }
 
   .cat-data__input {
+    padding: 3px 20px;
+
     &::placeholder {
       @include text-styles($font-primary, 20px, 400, normal, 0);
     }

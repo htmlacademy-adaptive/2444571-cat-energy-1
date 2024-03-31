@@ -81,9 +81,7 @@
 
   .guide__list-item {
     position: relative;
-  }
 
-  .guide__list-item {
     &::after {
       @include title-styles($font-primary,280px, 400, 280px,0);
       color: $background-grey;
